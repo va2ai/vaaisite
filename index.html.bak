@@ -1,0 +1,1943 @@
+<html>
+
+<head>
+    <title>HTML Online Viewer</title>
+</head>
+
+<body style="margin: 0px;">
+    <iframe srcdoc="&lt;html lang=&quot;en&quot; class=&quot;scroll-smooth&quot;&gt;&lt;head&gt;
+    &lt;meta name=&quot;surface-hint&quot; content=&quot;desktop-responsive&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cut VA Evidence Review Time 50% | Citation-Grounded AI for Attorneys &amp;amp; VSOs&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;style&gt;
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .serif { font-family: 'Merriweather', serif; }
+
+        /* Custom Scrollbar for the Demo Viewer */
+        .pdf-scroll::-webkit-scrollbar { width: 8px; }
+        .pdf-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
+        .pdf-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .pdf-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Animation Utilities */
+        @keyframes scan {
+            0% { top: 0; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        .scanner-line {
+            position: absolute;
+            left: 0; right: 0; height: 2px;
+            background: #3b82f6;
+            box-shadow: 0 0 4px #3b82f6;
+            animation: scan 2s linear infinite;
+            display: none;
+        }
+
+        /* @keyframes flow {
+            from { stroke-dashoffset: 20; }
+            to { stroke-dashoffset: 0; }
+        }
+        .flow-line {
+            stroke-dasharray: 10;
+            animation: flow 1s linear infinite;
+        } */
+
+        .highlight-text {
+            background-color: rgba(253, 224, 71, 0.3);
+            border-bottom: 2px solid #eab308;
+            transition: all 0.3s ease;
+        }
+        .highlight-active {
+            background-color: rgba(253, 224, 71, 0.6);
+            border-bottom: 3px solid #ca8a04;
+        }
+
+        /* Modal Transitions */
+        .modal { transition: opacity 0.25s ease; }
+        body.modal-active { overflow: hidden; }
+
+        /* Tab Transitions */
+        .tab-btn { position: relative; }
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e3a8a;
+            transition: width 0.3s ease;
+        }
+        .tab-btn.active::after { width: 100%; }
+        .tab-btn.active { color: #1e3a8a; font-weight: 600; }
+
+        .tab-content { display: none; opacity: 0; transition: opacity 0.3s ease; }
+        .tab-content.active { display: block; opacity: 1; }
+    &lt;/style&gt;
+    &lt;script&gt;
+        (g=&gt;{var h,a,k,p=&quot;The Google Maps JavaScript API&quot;,c=&quot;google&quot;,l=&quot;importLibrary&quot;,q=&quot;__ib__&quot;,m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=&gt;h||(h=new Promise(async(f,n)=&gt;{await (a=m.createElement(&quot;script&quot;));e.set(&quot;libraries&quot;,[...r]+&quot;&quot;);for(k in g)e.set(k.replace(/[A-Z]/g,t=&gt;&quot;_&quot;+t[0].toLowerCase()),g[k]);e.set(&quot;callback&quot;,c+&quot;.maps.&quot;+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=&gt;h=n(Error(p+&quot; could not load.&quot;));a.nonce=m.querySelector(&quot;script[nonce]&quot;)?.nonce||&quot;&quot;;m.head.append(a)}));d[l]?console.warn(p+&quot; only loads once. Ignoring:&quot;,g):d[l]=(f,...n)=&gt;r.add(f)&amp;&amp;u().then(()=&gt;d[l](f,...n))})({
+      key: &quot;AIzaSyBB_SVKlC9CcEjDt1H01_B7Gjmb8FiIaGw&quot;,
+      v: &quot;weekly&quot;,
+  });
+    &lt;/script&gt;
+&lt;style&gt;*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-top-4{top:-1rem}.left-0{left:0px}.left-1\/2{left:50%}.right-0{right:0px}.top-0{top:0px}.top-24{top:6rem}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-5{margin-top:1.25rem;margin-bottom:1.25rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.ml-auto{margin-left:auto}.mr-1{margin-right:0.25rem}.mr-1\.5{margin-right:0.375rem}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mb-16{margin-bottom:4rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mt-12{margin-top:3rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-12{height:3rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-\[600px\]{height:600px}.h-full{height:100%}.h-1{height:0.25rem}.h-16{height:4rem}.h-2\.5{height:0.625rem}.h-48{height:12rem}.h-64{height:16rem}.h-8{height:2rem}.w-2{width:0.5rem}.w-3{width:0.75rem}.w-full{width:100%}.w-0\.5{width:0.125rem}.w-11\/12{width:91.666667%}.w-16{width:4rem}.w-2\.5{width:0.625rem}.w-48{width:12rem}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-3{--tw-rotate:3deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-12{gap:3rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-2 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-y-6 &gt; :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-t{border-top-left-radius:0.25rem;border-top-right-radius:0.25rem}.border{border-width:1px}.border-2{border-width:2px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-dashed{border-style:dashed}.border-amber-100{--tw-border-opacity:1;border-color:rgb(254 243 199 / var(--tw-border-opacity, 1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-green-100{--tw-border-opacity:1;border-color:rgb(220 252 231 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255 / var(--tw-border-opacity, 1))}.border-purple-500{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.border-slate-400{--tw-border-opacity:1;border-color:rgb(148 163 184 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-400{--tw-bg-opacity:1;background-color:rgb(74 222 128 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-yellow-200{--tw-bg-opacity:1;background-color:rgb(254 240 138 / var(--tw-bg-opacity, 1))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity, 1))}.bg-amber-200{--tw-bg-opacity:1;background-color:rgb(253 230 138 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-800{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.bg-blue-800\/50{background-color:rgb(30 64 175 / 0.5)}.bg-blue-900\/50{background-color:rgb(30 58 138 / 0.5)}.bg-green-200{--tw-bg-opacity:1;background-color:rgb(187 247 208 / var(--tw-bg-opacity, 1))}.bg-indigo-900{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.bg-purple-200{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-red-200{--tw-bg-opacity:1;background-color:rgb(254 202 202 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 246 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-600{--tw-gradient-from:#16a34a var(--tw-gradient-from-position);--tw-gradient-to:rgb(22 163 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-50{--tw-gradient-from:#f8fafc var(--tw-gradient-from-position);--tw-gradient-to:rgb(248 250 252 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-slate-50\/90{--tw-gradient-to:rgb(248 250 252 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(248 250 252 / 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-amber-500{--tw-gradient-to:rgb(245 158 11 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #f59e0b var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-blue-950{--tw-gradient-to:rgb(23 37 84 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #172554 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-emerald-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-indigo-50{--tw-gradient-to:#eef2ff var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-slate-50{--tw-gradient-to:#f8fafc var(--tw-gradient-to-position)}.to-blue-50{--tw-gradient-to:#eff6ff var(--tw-gradient-to-position)}.to-blue-700{--tw-gradient-to:#1d4ed8 var(--tw-gradient-to-position)}.to-green-600{--tw-gradient-to:#16a34a var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.pb-20{padding-bottom:5rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pt-2{padding-top:0.5rem}.pt-32{padding-top:8rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.pb-2{padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.align-middle{vertical-align:middle}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace}.font-serif{font-family:ui-serif, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-5xl{font-size:3rem;line-height:1}.text-\[9px\]{font-size:9px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-purple-500{--tw-text-opacity:1;color:rgb(168 85 247 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-20{opacity:0.2}.opacity-0{opacity:0}.opacity-30{opacity:0.3}.opacity-50{opacity:0.5}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:animate-none:hover{animation:none}.hover\:border-slate-400:hover{--tw-border-opacity:1;border-color:rgb(148 163 184 / var(--tw-border-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-700:hover{--tw-bg-opacity:1;background-color:rgb(180 83 9 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:from-green-700:hover{--tw-gradient-from:#15803d var(--tw-gradient-from-position);--tw-gradient-to:rgb(21 128 61 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-purple-700:hover{--tw-gradient-from:#7e22ce var(--tw-gradient-from-position);--tw-gradient-to:rgb(126 34 206 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-blue-700:hover{--tw-gradient-from:#1d4ed8 var(--tw-gradient-from-position);--tw-gradient-to:rgb(29 78 216 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-emerald-700:hover{--tw-gradient-to:#047857 var(--tw-gradient-to-position)}.hover\:to-indigo-700:hover{--tw-gradient-to:#4338ca var(--tw-gradient-to-position)}.hover\:to-blue-800:hover{--tw-gradient-to:#1e40af var(--tw-gradient-to-position)}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.hover\:text-slate-600:hover{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/4{width:25%}.md\:w-3\/4{width:75%}.md\:max-w-md{max-width:28rem}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-left{text-align:left}}@media (min-width: 1024px){.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:mb-0{margin-bottom:0px}.lg\:mt-0{margin-top:0px}.lg\:block{display:block}.lg\:grid{display:grid}.lg\:w-2\/5{width:40%}.lg\:w-3\/5{width:60%}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}.lg\:gap-12{gap:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pb-32{padding-bottom:8rem}.lg\:pt-48{padding-top:12rem}.lg\:text-left{text-align:left}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}}&lt;/style&gt;&lt;/head&gt;
+&lt;body class=&quot;bg-slate-50 text-slate-900 antialiased&quot;&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class=&quot;fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-md&quot; id=&quot;navbar&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;flex justify-between h-20 items-center&quot;&gt;
+                &lt;div class=&quot;flex items-center&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-blue-900 text-3xl mr-2&quot;&gt;balance&lt;/span&gt;
+                    &lt;span class=&quot;font-bold text-xl tracking-tight text-slate-900 serif&quot;&gt;VA Claims&lt;span class=&quot;text-blue-700&quot;&gt;AI&lt;/span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;hidden md:flex space-x-8 items-center&quot;&gt;
+                    &lt;a href=&quot;#demo&quot; class=&quot;text-slate-600 hover:text-blue-700 font-medium transition&quot;&gt;Live Demo&lt;/a&gt;
+                    &lt;a href=&quot;#services&quot; class=&quot;text-slate-600 hover:text-blue-700 font-medium transition&quot;&gt;Capabilities&lt;/a&gt;
+                    &lt;a href=&quot;#engagement&quot; class=&quot;text-slate-600 hover:text-blue-700 font-medium transition&quot;&gt;Engagement&lt;/a&gt;
+                    &lt;a href=&quot;#about&quot; class=&quot;text-slate-600 hover:text-blue-700 font-medium transition&quot;&gt;About&lt;/a&gt;
+                    &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;bg-blue-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-800 transition shadow-sm hover:shadow-md&quot;&gt;
+                        Schedule Consultation
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;md:hidden flex items-center&quot;&gt;
+                    &lt;button class=&quot;text-slate-600 hover:text-slate-900&quot; onclick=&quot;document.getElementById('mobile-menu').classList.toggle('hidden')&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-3xl&quot;&gt;menu&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Mobile Menu --&gt;
+        &lt;div class=&quot;hidden md:hidden bg-white border-b border-slate-200&quot; id=&quot;mobile-menu&quot;&gt;
+            &lt;div class=&quot;px-2 pt-2 pb-3 space-y-1 sm:px-3&quot;&gt;
+                &lt;a href=&quot;#demo&quot; class=&quot;block px-3 py-2 text-slate-600 font-medium&quot;&gt;Live Demo&lt;/a&gt;
+                &lt;a href=&quot;#services&quot; class=&quot;block px-3 py-2 text-slate-600 font-medium&quot;&gt;Capabilities&lt;/a&gt;
+                &lt;a href=&quot;#engagement&quot; class=&quot;block px-3 py-2 text-slate-600 font-medium&quot;&gt;Engagement&lt;/a&gt;
+                &lt;a href=&quot;#about&quot; class=&quot;block px-3 py-2 text-slate-600 font-medium&quot;&gt;About&lt;/a&gt;
+                &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;w-full text-left px-3 py-2 text-blue-700 font-bold&quot;&gt;Schedule Consultation&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Hero Section --&gt;
+    &lt;header class=&quot;relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden&quot;&gt;
+        &lt;!-- Background Image with Overlay --&gt;
+        &lt;div class=&quot;absolute inset-0 z-0&quot;&gt;
+            &lt;img src=&quot;https://r2.vaclaims.net/file/site/blue.jpg&quot; alt=&quot;Abstract Legal Tech Background&quot; class=&quot;w-full h-full object-cover opacity-20&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/90 to-slate-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left&quot;&gt;
+            &lt;div class=&quot;lg:grid lg:grid-cols-2 lg:gap-12 items-center&quot;&gt;
+                &lt;div class=&quot;mb-12 lg:mb-0&quot;&gt;
+                    &lt;div class=&quot;inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6 border border-blue-200&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;verified_user&lt;/span&gt; For VA-Accredited Attorneys &amp;amp; VSOs
+                    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-4xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight&quot;&gt;
+                        Cut VA evidence review time by 50%—with &lt;span class=&quot;text-blue-800&quot;&gt;citation-grounded AI&lt;/span&gt;
+                    &lt;/h1&gt;
+                    &lt;p class=&quot;text-xl font-semibold text-slate-900 mb-4 max-w-2xl mx-auto lg:mx-0&quot;&gt;
+                        For VA-accredited attorneys and VSOs
+                    &lt;/p&gt;
+                    &lt;p class=&quot;text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed&quot;&gt;
+                        Built for traceability, attorney review, and audit-ready outputs
+                    &lt;/p&gt;
+                    &lt;div class=&quot;flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8&quot;&gt;
+                        &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;px-8 py-4 bg-blue-900 text-white rounded-xl font-semibold shadow-lg hover:bg-blue-800 transform hover:-translate-y-0.5 transition flex items-center justify-center&quot;&gt;
+                            Book a 15-min Workflow Audit
+                            &lt;span class=&quot;material-symbols-outlined ml-2&quot;&gt;arrow_forward&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;button onclick=&quot;openModal('assessment')&quot; class=&quot;px-8 py-4 bg-white text-slate-700 border border-slate-300 rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-400 transition flex items-center justify-center&quot;&gt;
+                            Request Risk + RAG Assessment
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Trust Bar --&gt;
+                    &lt;div class=&quot;grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto lg:mx-0&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 text-sm text-slate-700&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;health_and_safety&lt;/span&gt;
+                            &lt;span&gt;VA-focused&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 text-sm text-slate-700&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;link&lt;/span&gt;
+                            &lt;span&gt;Citation traceability&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 text-sm text-slate-700&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;fact_check&lt;/span&gt;
+                            &lt;span&gt;Human review checkpoints&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center gap-2 text-sm text-slate-700&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;security&lt;/span&gt;
+                            &lt;span&gt;Security-first architecture&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Hero Visual / Demo Loop --&gt;
+                &lt;div class=&quot;relative hidden lg:block&quot;&gt;
+                    &lt;!-- TODO: Replace with 10-20s animated GIF/video showing:
+                         Redacted decision → structured extraction → citations visible
+                         Current placeholder shows static workflow preview --&gt;
+                    &lt;div class=&quot;bg-white rounded-2xl shadow-2xl border border-slate-200 p-6 transform hover:scale-105 transition duration-500&quot;&gt;
+                        &lt;div class=&quot;flex items-center space-x-2 border-b border-slate-100 pb-4 mb-4&quot;&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-red-400 animate-pulse&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-yellow-400 animate-pulse&quot; style=&quot;animation-delay: 0.2s;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;w-3 h-3 rounded-full bg-green-400 animate-pulse&quot; style=&quot;animation-delay: 0.4s;&quot;&gt;&lt;/div&gt;
+                            &lt;span class=&quot;text-xs text-slate-400 ml-auto flex items-center gap-1&quot;&gt;
+                                &lt;span class=&quot;w-2 h-2 bg-green-500 rounded-full animate-pulse&quot;&gt;&lt;/span&gt;
+                                Live Processing
+                            &lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Animated workflow steps --&gt;
+                        &lt;div class=&quot;space-y-4&quot;&gt;
+                            &lt;div class=&quot;flex items-start p-3 bg-blue-50 rounded-lg border border-blue-100 animate-pulse&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-blue-600 mt-1 mr-3&quot;&gt;document_scanner&lt;/span&gt;
+                                &lt;div&gt;
+                                    &lt;h4 class=&quot;font-semibold text-blue-900 text-sm&quot;&gt;Scanning Decision&lt;/h4&gt;
+                                    &lt;p class=&quot;text-xs text-blue-700 mt-1&quot;&gt;BVA 12-34567 • Sleep Apnea SC • 14 pages • 3 contested issues&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex items-start p-3 bg-amber-50 rounded-lg border border-amber-100&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-amber-600 mt-1 mr-3&quot;&gt;psychology&lt;/span&gt;
+                                &lt;div&gt;
+                                    &lt;h4 class=&quot;font-semibold text-amber-900 text-sm&quot;&gt;Extracting Evidence&lt;/h4&gt;
+                                    &lt;p class=&quot;text-xs text-amber-700 mt-1&quot;&gt;Located: Dr. Smith nexus opinion • VA examiner concession • Benefit of doubt applied&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;flex items-start p-3 bg-green-50 rounded-lg border border-green-100&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-green-600 mt-1 mr-3&quot;&gt;verified&lt;/span&gt;
+                                &lt;div&gt;
+                                    &lt;h4 class=&quot;font-semibold text-green-900 text-sm&quot;&gt;Citations Linked&lt;/h4&gt;
+                                    &lt;p class=&quot;text-xs text-green-700 mt-1&quot;&gt;3 findings → 3 source citations (pg 4 ¶2, pg 6 ¶1, pg 7 ¶4) • Ready for attorney review&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Progress indicator --&gt;
+                        &lt;div class=&quot;mt-4 pt-4 border-t border-slate-100&quot;&gt;
+                            &lt;div class=&quot;flex justify-between text-xs text-slate-500 mb-2&quot;&gt;
+                                &lt;span&gt;Processing Complete&lt;/span&gt;
+                                &lt;span class=&quot;text-green-600 font-semibold&quot;&gt;Done in 47s&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;w-full bg-slate-200 rounded-full h-2&quot;&gt;
+                                &lt;div class=&quot;bg-green-600 h-2 rounded-full&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Interactive Demo Section --&gt;
+    &lt;section id=&quot;demo&quot; class=&quot;py-20 bg-slate-50 border-y border-slate-200&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;text-center mb-10&quot;&gt;
+                &lt;span class=&quot;text-blue-600 font-bold tracking-wider uppercase text-sm&quot;&gt;Extraction &amp;amp; System Demo&lt;/span&gt;
+                &lt;h2 class=&quot;text-3xl lg:text-4xl font-bold text-slate-900 mt-2 serif&quot;&gt;See It In Action&lt;/h2&gt;
+                &lt;p class=&quot;text-slate-600 mt-4 max-w-2xl mx-auto&quot;&gt;
+                    Explore how the system processes complex legal documents and visualize the underlying architecture.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Tabs --&gt;
+            &lt;div class=&quot;flex justify-center mb-8 border-b border-slate-200&quot;&gt;
+                &lt;button onclick=&quot;switchTab('demo-live')&quot; id=&quot;tab-btn-live&quot; class=&quot;tab-btn active px-6 py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none&quot;&gt;
+                    Live Interface
+                &lt;/button&gt;
+                &lt;button onclick=&quot;switchTab('demo-difference')&quot; id=&quot;tab-btn-difference&quot; class=&quot;tab-btn px-6 py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none&quot;&gt;
+                    Before &amp;amp; After
+                &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Tab Content: Live Interface --&gt;
+            &lt;div id=&quot;demo-live&quot; class=&quot;tab-content active&quot;&gt;
+                &lt;div class=&quot;bg-slate-100 rounded-xl shadow-inner border border-slate-300 overflow-hidden flex flex-col lg:flex-row h-[600px]&quot;&gt;
+                    &lt;!-- Left: Document Viewer --&gt;
+                    &lt;div class=&quot;w-full lg:w-3/5 bg-white border-r border-slate-200 flex flex-col relative&quot;&gt;
+                        &lt;div class=&quot;bg-slate-100 border-b border-slate-200&quot;&gt;
+                            &lt;div class=&quot;h-12 flex items-center px-4 justify-between border-b border-slate-300&quot;&gt;
+                                &lt;span class=&quot;text-xs font-semibold text-slate-500 uppercase flex items-center&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-base mr-1&quot;&gt;folder_open&lt;/span&gt; Case File: Veteran 12-34567
+                                &lt;/span&gt;
+                                &lt;div class=&quot;flex space-x-2&quot;&gt;
+                                    &lt;div class=&quot;w-2 h-2 rounded-full bg-green-500&quot;&gt;&lt;/div&gt;
+                                    &lt;div class=&quot;w-2 h-2 rounded-full bg-green-500&quot;&gt;&lt;/div&gt;
+                                    &lt;div class=&quot;w-2 h-2 rounded-full bg-green-500&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- Document Tabs --&gt;
+                            &lt;div class=&quot;flex gap-1 px-2 py-2&quot;&gt;
+                                &lt;div id=&quot;tab-0&quot; onclick=&quot;switchDocTab(0)&quot; class=&quot;px-3 py-1.5 bg-white border border-slate-300 rounded-t text-xs font-semibold text-slate-900 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;gavel&lt;/span&gt;
+                                    BVA Decision
+                                &lt;/div&gt;
+                                &lt;div id=&quot;tab-1&quot; onclick=&quot;switchDocTab(1)&quot; class=&quot;px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;description&lt;/span&gt;
+                                    RDS (Rating)
+                                &lt;/div&gt;
+                                &lt;div id=&quot;tab-2&quot; onclick=&quot;switchDocTab(2)&quot; class=&quot;px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;medical_services&lt;/span&gt;
+                                    CP Exam
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Scanner Line --&gt;
+                        &lt;div id=&quot;scanner-line&quot; class=&quot;scanner-line z-20&quot;&gt;&lt;/div&gt;
+
+                        &lt;!-- Scrollable Text --&gt;
+                        &lt;div id=&quot;doc-viewer&quot; class=&quot;flex-1 overflow-y-auto p-8 pdf-scroll relative text-slate-800 text-sm leading-relaxed font-serif&quot;&gt;
+                            &lt;div class=&quot;max-w-2xl mx-auto space-y-8&quot;&gt;
+                                &lt;!-- BVA Decision Document --&gt;
+                                &lt;div&gt;
+                                    &lt;p class=&quot;text-center font-bold mb-6 text-slate-500 text-xs&quot;&gt;BOARD OF VETERANS' APPEALS&lt;br&gt;For the Secretary of Veterans Affairs&lt;br&gt;Washington, DC 20038&lt;/p&gt;
+
+                                    &lt;h3 class=&quot;font-bold text-lg mb-4 text-center&quot;&gt;IN THE APPEAL OF&lt;br&gt;[SPOUSE NAME]&lt;br&gt;IN THE CASE OF [VETERAN NAME]&lt;/h3&gt;
+
+                                    &lt;p class=&quot;mb-4 text-xs&quot;&gt;SS XXX XX XXXX&lt;br&gt;Docket No. XX-XXXXX&lt;br&gt;DATE: March 14, 2024&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-center font-bold text-lg&quot;&gt;REMANDED&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-6&quot;&gt;Entitlement to service connection for an acquired psychiatric disability, to include bipolar disorder, major depression, and anxiety disorder, is remanded.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;REASONS FOR REMAND&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;The decedent served on active duty for training (ADT) from April to September 1972, with additional service in the Air National Guard thereafter. The decedent passed away in February 2021. As of June 2021, substitution in this matter has been granted and the appellant has been substituted by reason of being the decedent's surviving spouse.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;This matter comes before the Board of Veterans' Appeals (Board) on appeal from a July 2020 rating decision by the Department of Veterans Affairs (VA) Regional Office (RO). The matter was previously before the Board in June 2020, at which time the Board remanded it for further developments.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold text-sm&quot;&gt;SERVICE HISTORY AND VETERAN STATUS&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm bg-slate-50 p-3 rounded&quot;&gt;The decedent served in the Air National Guard, with a 6-years enlistment contract starting in March 1972. However, in March 1974, he was medically discharged due to drug abuse and personality disorder. &lt;span class=&quot;bg-yellow-200&quot;&gt;As the decedent did not have a period of active military, naval or air service and was not awarded service connection for any disabilities, he is not considered a veteran for the purposes of VA disability compensation.&lt;/span&gt; 38 U.S.C. § 101(2).&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;Periods of ADT are only considered active service if an individual is disabled due to disease or injury incurred during ADT. 38 U.S.C. § 101(24)(B), (C). The issue before the Board is whether the decedent's acquired psychiatric disorder started during ADT, from April to September 1972, or afterwards.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold text-sm&quot;&gt;MEDICAL EVIDENCE&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot; id=&quot;para-sa-1&quot;&gt;
+                                        The decedent's service treatment records show that his March 1972 entrance examination was unremarkable for mental health problems. However, &lt;span class=&quot;bg-yellow-200&quot; id=&quot;citation-1&quot;&gt;in November 1973, the decedent received a psychiatric evaluation, and the report states: &quot;[decedent] has a history of drug abuse, marijuana, LSD, and barbiturates since basic training in 1972.&quot;&lt;/span&gt;
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot; id=&quot;para-sa-2&quot;&gt;
+                                        A December 1973 mental health evaluation report indicates that the decedent was administered the Minnesota Multiphasic Personality Inventory (MMPI) on November 19, 1973, which reported: &lt;span class=&quot;bg-yellow-200&quot;&gt;&quot;He described his mother as an extremely nervous individual who has had 2/3 nervous breakdown requiring hospitalization. His history is strewn with immature and inadequate attempts to manipulate the environment.&quot;&lt;/span&gt; A diagnosis of inadequate personality followed.
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot; id=&quot;para-sa-3&quot;&gt;
+                                        &lt;span id=&quot;citation-2&quot;&gt;In November 2012, a VA psychiatrist provided a letter opining that the decedent's psychiatric disability first manifested by symptoms of drug abuse and personality problems while on active duty.&lt;/span&gt;
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;In April 2010, the appellant submitted a statement reporting that after decedent returned from bootcamp he was fine and identifying the onset of the decedent's mental health problems when he started to train as mechanic at the motor pool under the command of a senior NCO. Specifically, she stated that the NCO would constantly harass the decedent and be verbally abusive towards him, threatening him on a daily basis.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold text-sm&quot;&gt;VA EXAMINATION ANALYSIS&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;The decedent was afforded a VA examination in March 2019. At that time, the appellant met the DSM-5 criteria for a diagnosis of bipolar disorder. The VA examiner ultimately opined that, while it was very difficult to identify a precise onset for the decedent's mental disability, &lt;span class=&quot;bg-yellow-200&quot;&gt;the evidence more persuasively showed that the appellant's mental disability started after basic training and was therefore not related to his ADT.&lt;/span&gt;&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot; id=&quot;para-sa-4&quot;&gt;
+                                        &lt;span id=&quot;citation-3&quot;&gt;The Board finds that the March 2019 VA opinion is inadequate. First, the decedent's DD 214, box 25, reveals that as part of ADT service, the decedent completed basic training as well as MOS training, to include apprenticeship as general vehicle repairman. The March 2019 VA examiner did not discuss the November 2012 VA letter, or other positive evidence, and it is therefore inadequate.&lt;/span&gt; See Nieves-Rodriguez v. Peake, 22 Vet. App. 295, 304 (2008).
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;Accordingly, a remand is necessary to obtain an addendum opinion and correct a pre-decisional duty to assist error. 38 U.S.C. § 5103A; 38 C.F.R. §§ 20.302, 20.802.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold text-sm&quot;&gt;ORDER&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm bg-blue-50 p-3 rounded&quot; id=&quot;para-order&quot;&gt;
+                                        The matter is REMANDED for the following action:&lt;br&gt;&lt;br&gt;
+                                        1. Obtain an addendum opinion on whether the decedent acquired a psychiatric disability started sometime between April 1972 and September 1972, during which time the decedent completed basic training and mechanic school training.&lt;br&gt;&lt;br&gt;
+                                        2. The VA examiner should address whether the decedent had a depressive disorder and attention deficit hyperactivity disorder in addition to bipolar disorder.&lt;br&gt;&lt;br&gt;
+                                        3. In addressing these matters, the VA examiner should discuss the prior VA psychiatric opinions dated November 2012 and March 2017.
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mt-6 text-xs&quot;&gt;[JUDGE NAME]&lt;br&gt;Veterans Law Judge&lt;br&gt;Board of Veterans' Appeals&lt;br&gt;&lt;br&gt;Attorney for the Board: [ATTORNEY NAME], Associate Counsel&lt;/p&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Divider --&gt;
+                                &lt;div class=&quot;border-t-2 border-dashed border-slate-300 pt-8&quot;&gt;&lt;/div&gt;
+
+                                &lt;!-- RDS Document --&gt;
+                                &lt;div&gt;
+                                    &lt;p class=&quot;text-center font-bold mb-6 text-slate-500 text-xs&quot;&gt;DEPARTMENT OF VETERANS AFFAIRS&lt;br&gt;Regional Office&lt;br&gt;Rating Decision Sheet&lt;/p&gt;
+
+                                    &lt;h3 class=&quot;font-bold text-lg mb-4 text-center&quot;&gt;RATING DECISION&lt;/h3&gt;
+
+                                    &lt;p class=&quot;mb-4&quot;&gt;VETERAN: [REDACTED] &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; File Number: XXX-XX-XXXX&lt;br&gt;DATE: July 15, 2020&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;ISSUE DECIDED&lt;/p&gt;
+
+                                    &lt;div class=&quot;mb-6 bg-red-50 p-4 rounded border border-red-200&quot; id=&quot;rds-psych&quot;&gt;
+                                        &lt;p class=&quot;font-bold mb-2&quot;&gt;Service Connection for Acquired Psychiatric Disorder&lt;/p&gt;
+                                        &lt;p class=&quot;mb-2&quot;&gt;&lt;span id=&quot;rds-citation-1&quot; class=&quot;bg-yellow-200&quot;&gt;Service connection is DENIED for acquired psychiatric disorder, claimed as bipolar disorder, major depression, and anxiety disorder.&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p class=&quot;text-xs text-slate-600 mt-3 mb-2&quot;&gt;
+                                            &lt;span class=&quot;font-semibold&quot;&gt;REASONS:&lt;/span&gt; The evidence does not establish that the Veteran's psychiatric condition manifested during or was incurred during the period of active duty for training (ADT) from April to September 1972.
+                                        &lt;/p&gt;
+                                        &lt;p class=&quot;text-xs text-slate-600 mb-2&quot;&gt;
+                                            The March 2019 VA examination opinion indicates that the Veteran's mental disorder more likely first manifested after basic training, during National Guard service (post-September 1972). The first documented psychiatric evaluation occurred in November 1973, which is after the ADT period ended.
+                                        &lt;/p&gt;
+                                        &lt;p class=&quot;text-xs text-slate-600&quot;&gt;
+                                            While the Veteran contends that his psychiatric problems began during basic training due to harassment and verbal abuse, the medical evidence does not support onset during the ADT period as required by 38 U.S.C. § 101(24)(B).
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;EVIDENCE CONSIDERED&lt;/p&gt;
+                                    &lt;div class=&quot;text-sm text-slate-700 space-y-1&quot;&gt;
+                                        &lt;p&gt;• Service Treatment Records (April-September 1972)&lt;/p&gt;
+                                        &lt;p&gt;• National Guard Records (1972-1974)&lt;/p&gt;
+                                        &lt;p&gt;• VA Compensation &amp;amp; Pension Examination (March 13, 2019)&lt;/p&gt;
+                                        &lt;p&gt;• VA Psychiatric Treatment Records (2002-2020)&lt;/p&gt;
+                                        &lt;p&gt;• Spouse Statement (April 2010)&lt;/p&gt;
+                                        &lt;p&gt;• November 1973 Psychiatric Evaluation Report&lt;/p&gt;
+                                        &lt;p&gt;• November 2012 VA Psychiatrist Letter&lt;/p&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;p class=&quot;mb-4 mt-4 font-bold&quot;&gt;REGULATIONS APPLIED&lt;/p&gt;
+                                    &lt;div class=&quot;text-xs text-slate-600&quot;&gt;
+                                        &lt;p&gt;38 U.S.C. § 101(24)(A): Definition of active service&lt;/p&gt;
+                                        &lt;p&gt;38 U.S.C. § 101(24)(B): ADT as active service only if disability incurred during ADT&lt;/p&gt;
+                                        &lt;p&gt;38 C.F.R. § 3.303: Service connection requirements&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Divider --&gt;
+                                &lt;div class=&quot;border-t-2 border-dashed border-slate-300 pt-8&quot;&gt;&lt;/div&gt;
+
+                                &lt;!-- CP Exam Document --&gt;
+                                &lt;div&gt;
+                                    &lt;p class=&quot;text-center font-bold mb-6 text-slate-500 text-xs&quot;&gt;DEPARTMENT OF VETERANS AFFAIRS&lt;br&gt;[VA Medical Center]&lt;br&gt;C&amp;amp;P EXAMINATION NOTE&lt;/p&gt;
+
+                                    &lt;h3 class=&quot;font-bold text-lg mb-4 text-center&quot;&gt;Mental Disorders (other than PTSD and Eating Disorders)&lt;br&gt;Disability Benefits Questionnaire&lt;/h3&gt;
+
+                                    &lt;p class=&quot;mb-4 text-xs&quot;&gt;DATE OF NOTE: MAR 13, 2019@10:30&lt;br&gt;AUTHOR: [EXAMINER NAME]&lt;br&gt;STATUS: COMPLETED&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;SECTION I: DIAGNOSIS&lt;/p&gt;
+                                    &lt;p class=&quot;mb-2&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;Mental Disorder Diagnosis #1:&lt;/span&gt; Unspecified Bipolar Disorder&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;ICD code:&lt;/span&gt; F31.9&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;SECTION II: OCCUPATIONAL AND SOCIAL IMPAIRMENT&lt;/p&gt;
+                                    &lt;div class=&quot;mb-6 bg-purple-50 p-4 rounded border border-purple-200&quot; id=&quot;cp-findings&quot;&gt;
+                                        &lt;p class=&quot;mb-2&quot; id=&quot;cp-citation-1&quot;&gt;
+                                            &lt;span class=&quot;font-semibold&quot;&gt;Level of Impairment:&lt;/span&gt; &lt;span class=&quot;bg-yellow-200&quot;&gt;Occupational and social impairment with deficiencies in most areas, such as work, school, family relations, judgment, thinking and/or mood&lt;/span&gt;
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;SYMPTOMS&lt;/p&gt;
+                                    &lt;div class=&quot;mb-4 text-sm&quot;&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Depressed mood&lt;/p&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Anxiety&lt;/p&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Circumstantial, circumlocutory or stereotyped speech&lt;/p&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Disturbances of motivation and mood&lt;/p&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Difficulty in establishing and maintaining effective work and social relationships&lt;/p&gt;
+                                        &lt;p class=&quot;mb-1&quot;&gt;☑ Difficulty in adapting to stressful circumstances, including work or worklike setting&lt;/p&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;BEHAVIORAL OBSERVATIONS&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;
+                                        The veteran arrived early for his scheduled examination. He was accompanied by his wife. The veteran was using a wheelchair for ambulation. His manner of interaction was cooperative and courteous. Speech was normal in rate, rhythm, tone, and volume. &lt;span class=&quot;bg-yellow-200&quot;&gt;Thought processes were rambling, circumstantial, and tangential.&lt;/span&gt; The veteran's mood was described as hopeless, his affect was fairly anxious.
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;EVIDENCE REVIEW&lt;/p&gt;
+                                    &lt;p class=&quot;mb-2 text-sm&quot;&gt;Evidence reviewed:&lt;/p&gt;
+                                    &lt;p class=&quot;mb-1 text-sm&quot;&gt;☑ VA e-folder&lt;/p&gt;
+                                    &lt;p class=&quot;mb-1 text-sm&quot;&gt;☑ CPRS&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;☑ Other: The veteran's wife of almost 40 years was present through much of the interview.&lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;MEDICAL HISTORY&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;
+                                        Review of service treatment records shows entry into US Air National Guard on April 9, 1972 with honorable discharge at rank of E2 on September 28, 1972. Medical examination dated November 4, 1973 marked &quot;abnormal&quot; for psychiatric evaluation. &lt;span class=&quot;bg-yellow-200&quot;&gt;History documents increased drug use including marijuana, LSD, and barbiturates, with initial use starting during basic training 1972.&lt;/span&gt; Provisional diagnosis was &quot;personality and behavior disorder.&quot;
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;CURRENT TREATMENT&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;
+                                        Extensive treatment for mental health problems including bipolar disorder. Records indicate veteran was psychiatrically hospitalized in 2007 with diagnoses of bipolar 2 disorder, alcohol abuse, and personality disorder NOS. Current medication regimen includes divalproex, fluoxetine, and methylphenidate.
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;COMPETENCY&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm&quot;&gt;
+                                        The Veteran is capable of managing his financial affairs: ☑ Yes
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mb-4 font-bold&quot;&gt;REMARKS&lt;/p&gt;
+                                    &lt;p class=&quot;mb-4 text-sm text-slate-600&quot;&gt;
+                                        After extensive review of the veteran's C-file, I was unable to find evidence that mental health problems were occurring during basic training, but there were several pieces of evidence identifying the onset of various mental health issues including behavior problems, personality problems, and drug abuse during post basic training service in the National Guard. &lt;span class=&quot;bg-yellow-200&quot;&gt;The evidence available points to the onset or manifestation of the veteran's mental health issues occurring sometime between September 29, 1972 and November 4, 1973.&lt;/span&gt;
+                                    &lt;/p&gt;
+
+                                    &lt;p class=&quot;mt-6 text-sm&quot;&gt;/es/ [EXAMINER NAME]&lt;br&gt;Staff Psychologist&lt;br&gt;Signed: 03/13/2019 14:49&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Right: AI Analysis Panel --&gt;
+                    &lt;div class=&quot;w-full lg:w-2/5 bg-slate-50 flex flex-col border-l border-slate-200&quot;&gt;
+                        &lt;div class=&quot;h-12 bg-white border-b border-slate-200 flex items-center px-4 justify-between shadow-sm z-10&quot;&gt;
+                            &lt;span class=&quot;text-xs font-semibold text-blue-900 uppercase flex items-center&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-base mr-1&quot;&gt;smart_toy&lt;/span&gt; AI Extraction Layer
+                            &lt;/span&gt;
+
+                            &lt;span class=&quot;text-[10px] text-slate-400&quot;&gt;v2.4.1 (RAG-Verified)&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;p-6 flex-1 overflow-y-auto&quot;&gt;
+                            &lt;!-- Initial State --&gt;
+                            &lt;div id=&quot;demo-initial&quot; class=&quot;flex flex-col items-center justify-center h-full text-center&quot;&gt;
+                                &lt;div class=&quot;bg-blue-100 p-4 rounded-full mb-4&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-blue-600 text-4xl&quot;&gt;document_scanner&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;text-slate-900 font-medium mb-2&quot;&gt;Ready to Analyze&lt;/h3&gt;
+                                &lt;p class=&quot;text-slate-500 text-sm mb-6&quot;&gt;Click below to run the extraction model on the sample decision.&lt;/p&gt;
+                                &lt;button onclick=&quot;runDemo()&quot; class=&quot;bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-blue-700 transition flex items-center&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined mr-2&quot;&gt;play_arrow&lt;/span&gt; Run Analysis
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;!-- Results State (Hidden initially) --&gt;
+                            &lt;div id=&quot;demo-results&quot; class=&quot;hidden space-y-4&quot;&gt;
+                                &lt;!-- Analysis Summary Header --&gt;
+                                &lt;div class=&quot;bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4&quot;&gt;
+                                    &lt;div class=&quot;flex items-center justify-between mb-3&quot;&gt;
+                                        &lt;h3 class=&quot;font-bold text-slate-900 text-sm flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-lg mr-2&quot;&gt;analytics&lt;/span&gt;
+                                            Analysis Complete
+                                        &lt;/h3&gt;
+                                        &lt;span class=&quot;bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium&quot;&gt;VERIFIED&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;grid grid-cols-3 gap-3 text-center&quot;&gt;
+                                        &lt;div class=&quot;bg-white rounded p-2&quot;&gt;
+                                            &lt;div class=&quot;text-2xl font-bold text-blue-600&quot;&gt;3&lt;/div&gt;
+                                            &lt;div class=&quot;text-[10px] text-slate-600 uppercase tracking-wide&quot;&gt;Documents&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;bg-white rounded p-2&quot;&gt;
+                                            &lt;div class=&quot;text-2xl font-bold text-green-600&quot;&gt;12&lt;/div&gt;
+                                            &lt;div class=&quot;text-[10px] text-slate-600 uppercase tracking-wide&quot;&gt;Key Facts&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;bg-white rounded p-2&quot;&gt;
+                                            &lt;div class=&quot;text-2xl font-bold text-purple-600&quot;&gt;8&lt;/div&gt;
+                                            &lt;div class=&quot;text-[10px] text-slate-600 uppercase tracking-wide&quot;&gt;Cross-Refs&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Download Report Buttons - Prominent Placement --&gt;
+                                &lt;div class=&quot;space-y-3&quot;&gt;
+                                    &lt;a href=&quot;https://r2.vaclaims.net/file/site/VA_Claim_Analysis_Report_Premium.pdf&quot; target=&quot;_blank&quot; class=&quot;block w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold text-sm py-4 px-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 animate-pulse hover:animate-none&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-xl&quot;&gt;description&lt;/span&gt;
+                                        &lt;span&gt;Download Complete Analysis Report (PDF)&lt;/span&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-xl&quot;&gt;download&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;a href=&quot;https://r2.vaclaims.net/file/site/VA_Claims_AI_Research_Report.pdf&quot; target=&quot;_blank&quot; class=&quot;block w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-sm py-4 px-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-xl&quot;&gt;science&lt;/span&gt;
+                                        &lt;span&gt;Download AI Research Report (PDF)&lt;/span&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-xl&quot;&gt;download&lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Primary Issue Card --&gt;
+                                &lt;div class=&quot;bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition cursor-pointer group&quot; onclick=&quot;highlight('citation-3', 'para-sa-4')&quot;&gt;
+                                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                                        &lt;h4 class=&quot;font-bold text-slate-800 text-sm flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-base mr-1.5&quot;&gt;assignment&lt;/span&gt;
+                                            Primary Issue: Psychiatric Disability
+                                        &lt;/h4&gt;
+                                        &lt;span class=&quot;bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-medium&quot;&gt;REMANDED&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;p class=&quot;text-xs text-slate-600 mb-3 leading-relaxed&quot;&gt;Service connection claim for acquired psychiatric disorder (bipolar, depression, anxiety) remanded for additional medical examination.&lt;/p&gt;
+
+                                    &lt;div class=&quot;bg-slate-50 rounded p-2 mb-3&quot;&gt;
+                                        &lt;div class=&quot;text-[10px] text-slate-500 uppercase tracking-wide mb-1&quot;&gt;Confidence Scores&lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 text-xs&quot;&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;Issue Identification:&lt;/span&gt;
+                                            &lt;div class=&quot;flex-1 bg-slate-200 rounded-full h-1.5&quot;&gt;
+                                                &lt;div class=&quot;bg-green-500 h-1.5 rounded-full&quot; style=&quot;width: 98%&quot;&gt;&lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-green-600 font-medium&quot;&gt;98%&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 text-xs mt-1&quot;&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;Citation Accuracy:&lt;/span&gt;
+                                            &lt;div class=&quot;flex-1 bg-slate-200 rounded-full h-1.5&quot;&gt;
+                                                &lt;div class=&quot;bg-green-500 h-1.5 rounded-full&quot; style=&quot;width: 95%&quot;&gt;&lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-green-600 font-medium&quot;&gt;95%&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;div class=&quot;space-y-1.5&quot;&gt;
+                                        &lt;div class=&quot;flex items-start text-xs text-blue-600 font-medium bg-blue-50 p-2 rounded group-hover:bg-blue-100 transition&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1 mt-0.5&quot;&gt;gavel&lt;/span&gt;
+                                            &lt;div&gt;
+                                                &lt;span class=&quot;font-semibold&quot;&gt;BVA Decision&lt;/span&gt;
+                                                &lt;span class=&quot;text-blue-500&quot;&gt; • March 14, 2024:&lt;/span&gt;
+                                                &lt;span class=&quot;text-slate-600&quot;&gt; &quot;March 2019 VA opinion inadequate... examiner did not discuss November 2012 VA letter&quot;&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Service History Analysis --&gt;
+                                &lt;div class=&quot;bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-sm hover:shadow-md transition&quot;&gt;
+                                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                                        &lt;h4 class=&quot;font-bold text-slate-800 text-sm flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-base mr-1.5&quot;&gt;history&lt;/span&gt;
+                                            Service Timeline Analysis
+                                        &lt;/h4&gt;
+                                        &lt;span class=&quot;bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded font-medium&quot;&gt;ADT PERIOD&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;space-y-2 text-xs&quot;&gt;
+                                        &lt;div class=&quot;flex items-start gap-2&quot;&gt;
+                                            &lt;span class=&quot;text-amber-600 font-mono&quot;&gt;1972-04&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;→ Active Duty for Training begins (Basic + MOS)&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-start gap-2&quot;&gt;
+                                            &lt;span class=&quot;text-amber-600 font-mono&quot;&gt;1972-09&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;→ ADT period ends, National Guard service&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-start gap-2&quot;&gt;
+                                            &lt;span class=&quot;text-red-600 font-mono&quot;&gt;1973-11&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;→ First psychiatric evaluation documented&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-start gap-2&quot;&gt;
+                                            &lt;span class=&quot;text-slate-400 font-mono&quot;&gt;1974-03&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;→ Medical discharge (drug abuse, personality disorder)&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Medical Evidence Summary --&gt;
+                                &lt;div class=&quot;bg-white p-4 rounded-lg border-l-4 border-purple-500 shadow-sm hover:shadow-md transition cursor-pointer group&quot; onclick=&quot;highlight('citation-1', 'para-sa-2')&quot;&gt;
+                                    &lt;div class=&quot;flex justify-between items-start mb-2&quot;&gt;
+                                        &lt;h4 class=&quot;font-bold text-slate-800 text-sm flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-purple-600 text-base mr-1.5&quot;&gt;medical_information&lt;/span&gt;
+                                            Medical Evidence Chain
+                                        &lt;/h4&gt;
+                                        &lt;span class=&quot;bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded font-medium&quot;&gt;8 RECORDS&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;p class=&quot;text-xs text-slate-600 mb-3&quot;&gt;Cross-referenced medical opinions spanning multiple decades&lt;/p&gt;
+                                    &lt;div class=&quot;space-y-1.5&quot;&gt;
+                                        &lt;div class=&quot;flex items-start text-xs text-purple-600 font-medium bg-purple-50 p-2 rounded group-hover:bg-purple-100 transition&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1 mt-0.5&quot;&gt;medical_services&lt;/span&gt;
+                                            &lt;div&gt;
+                                                &lt;span class=&quot;font-semibold&quot;&gt;C&amp;amp;P Exam&lt;/span&gt;
+                                                &lt;span class=&quot;text-purple-500&quot;&gt; • Mar 2019:&lt;/span&gt;
+                                                &lt;span class=&quot;text-slate-600&quot;&gt; &quot;Bipolar disorder (F31.9), occupational/social impairment with deficiencies in most areas&quot;&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-start text-xs text-purple-600 font-medium bg-purple-50 p-2 rounded group-hover:bg-purple-100 transition&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1 mt-0.5&quot;&gt;history_edu&lt;/span&gt;
+                                            &lt;div&gt;
+                                                &lt;span class=&quot;font-semibold&quot;&gt;VA Psychiatrist&lt;/span&gt;
+                                                &lt;span class=&quot;text-purple-500&quot;&gt; • Nov 2012:&lt;/span&gt;
+                                                &lt;span class=&quot;text-slate-600&quot;&gt; &quot;First manifested by drug abuse and personality problems while on active duty&quot;&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-start text-xs text-purple-600 font-medium bg-purple-50 p-2 rounded group-hover:bg-purple-100 transition&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1 mt-0.5&quot;&gt;psychology&lt;/span&gt;
+                                            &lt;div&gt;
+                                                &lt;span class=&quot;font-semibold&quot;&gt;Service Records&lt;/span&gt;
+                                                &lt;span class=&quot;text-purple-500&quot;&gt; • Nov 1973:&lt;/span&gt;
+                                                &lt;span class=&quot;text-slate-600&quot;&gt; &quot;History of drug abuse since basic training 1972, MMPI administered&quot;&lt;/span&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Regulatory Compliance Check --&gt;
+                                &lt;div class=&quot;bg-green-50 border border-green-200 rounded-lg p-3&quot;&gt;
+                                    &lt;h4 class=&quot;font-bold text-green-800 text-xs mb-2 flex items-center&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;verified&lt;/span&gt;
+                                        Regulatory Compliance
+                                    &lt;/h4&gt;
+                                    &lt;div class=&quot;grid grid-cols-2 gap-2 text-[11px]&quot;&gt;
+                                        &lt;div class=&quot;flex items-center gap-1.5&quot;&gt;
+                                            &lt;span class=&quot;text-green-600&quot;&gt;✓&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;38 U.S.C. § 5103A cited&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-1.5&quot;&gt;
+                                            &lt;span class=&quot;text-green-600&quot;&gt;✓&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;38 C.F.R. § 20.302 cited&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-1.5&quot;&gt;
+                                            &lt;span class=&quot;text-green-600&quot;&gt;✓&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;Case law: Nieves-Rodriguez&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-1.5&quot;&gt;
+                                            &lt;span class=&quot;text-green-600&quot;&gt;✓&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-700&quot;&gt;DSM-5 criteria verified&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Document-by-Document Analysis --&gt;
+                                &lt;div class=&quot;border border-indigo-200 rounded-lg overflow-hidden&quot;&gt;
+                                    &lt;div class=&quot;bg-indigo-50 px-3 py-2 border-b border-indigo-200&quot;&gt;
+                                        &lt;h4 class=&quot;font-bold text-indigo-900 text-xs flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;description&lt;/span&gt;
+                                            Document Analysis &amp;amp; Cross-References
+                                        &lt;/h4&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;!-- BVA Decision Analysis --&gt;
+                                    &lt;div class=&quot;bg-white p-3 border-b border-slate-100&quot;&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-base&quot;&gt;gavel&lt;/span&gt;
+                                            &lt;span class=&quot;font-bold text-slate-800 text-xs&quot;&gt;BVA Decision (March 14, 2024)&lt;/span&gt;
+                                            &lt;span class=&quot;ml-auto bg-blue-100 text-blue-700 text-[10px] px-1.5 py-0.5 rounded font-medium&quot;&gt;REMAND&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;space-y-1.5 text-[11px]&quot;&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Issue:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; Service connection for psychiatric disability (bipolar, depression, anxiety)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Finding:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; March 2019 VA exam inadequate - failed to discuss prior medical opinions&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Legal Basis:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; 38 U.S.C. § 5103A (duty to assist error)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;bg-blue-50 rounded p-2 mt-2&quot;&gt;
+                                                &lt;div class=&quot;text-[10px] text-blue-700 font-medium mb-1&quot;&gt;Cross-References →&lt;/div&gt;
+                                                &lt;div class=&quot;flex flex-wrap gap-1&quot;&gt;
+                                                    &lt;span class=&quot;bg-purple-100 text-purple-700 text-[10px] px-2 py-0.5 rounded&quot;&gt;CP Exam (2019)&lt;/span&gt;
+                                                    &lt;span class=&quot;bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded&quot;&gt;Service Records (1973)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;!-- RDS Analysis --&gt;
+                                    &lt;div class=&quot;bg-white p-3 border-b border-slate-100&quot;&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-base&quot;&gt;description&lt;/span&gt;
+                                            &lt;span class=&quot;font-bold text-slate-800 text-xs&quot;&gt;Rating Decision Sheet (July 2020)&lt;/span&gt;
+                                            &lt;span class=&quot;ml-auto bg-red-100 text-red-700 text-[10px] px-1.5 py-0.5 rounded font-medium&quot;&gt;DENIED&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;space-y-1.5 text-[11px]&quot;&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-amber-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Decision:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; Service connection denied - onset after ADT period&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-amber-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Rationale:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; First psychiatric evaluation dated Nov 1973 (post-ADT)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-amber-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Evidence Considered:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; March 2019 C&amp;amp;P exam, service treatment records, private opinions&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;bg-amber-50 rounded p-2 mt-2&quot;&gt;
+                                                &lt;div class=&quot;text-[10px] text-amber-700 font-medium mb-1&quot;&gt;Relationship to BVA →&lt;/div&gt;
+                                                &lt;div class=&quot;text-[10px] text-slate-600&quot;&gt;RO decision overturned by Board due to inadequate examination rationale&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;!-- CP Exam Analysis --&gt;
+                                    &lt;div class=&quot;bg-white p-3&quot;&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 mb-2&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-purple-600 text-base&quot;&gt;medical_services&lt;/span&gt;
+                                            &lt;span class=&quot;font-bold text-slate-800 text-xs&quot;&gt;C&amp;amp;P Examination (March 13, 2019)&lt;/span&gt;
+                                            &lt;span class=&quot;ml-auto bg-purple-100 text-purple-700 text-[10px] px-1.5 py-0.5 rounded font-medium&quot;&gt;DBQ F31.9&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;space-y-1.5 text-[11px]&quot;&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-purple-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Diagnosis:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; Unspecified Bipolar Disorder (ICD-10: F31.9)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-purple-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Severity:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; Occupational/social impairment with deficiencies in most areas&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-purple-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Examiner Opinion:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; Mental disability onset more likely post-basic training (post-Sept 1972)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;flex items-start gap-1.5&quot;&gt;
+                                                &lt;span class=&quot;text-purple-600 mt-0.5&quot;&gt;▸&lt;/span&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Evidence Reviewed:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-600&quot;&gt; DD-214, 1973 service records, 2012 VA psychiatrist letter&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;bg-purple-50 rounded p-2 mt-2&quot;&gt;
+                                                &lt;div class=&quot;text-[10px] text-purple-700 font-medium mb-1&quot;&gt;Critical Issue Identified by BVA →&lt;/div&gt;
+                                                &lt;div class=&quot;text-[10px] text-slate-600&quot;&gt;Examiner failed to address conflicting evidence: Nov 2012 VA psychiatrist opined onset &quot;while on active duty&quot; but March 2019 exam didn't discuss this opinion&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Key Relationship Map --&gt;
+                                &lt;div class=&quot;bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 rounded-lg p-3&quot;&gt;
+                                    &lt;h4 class=&quot;font-bold text-slate-800 text-xs mb-2 flex items-center&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;hub&lt;/span&gt;
+                                        Evidence Relationship Map
+                                    &lt;/h4&gt;
+                                    &lt;div class=&quot;space-y-2 text-[11px]&quot;&gt;
+                                        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                                            &lt;div class=&quot;flex items-center gap-1&quot;&gt;
+                                                &lt;div class=&quot;w-2 h-2 rounded-full bg-purple-500&quot;&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;CP Exam&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-slate-400&quot;&gt;→&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;Provides current diagnosis (F31.9) and severity rating&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                                            &lt;div class=&quot;flex items-center gap-1&quot;&gt;
+                                                &lt;div class=&quot;w-2 h-2 rounded-full bg-green-500&quot;&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;Service Records&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-slate-400&quot;&gt;→&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;Document Nov 1973 psychiatric evaluation (drug abuse since 1972)&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                                            &lt;div class=&quot;flex items-center gap-1&quot;&gt;
+                                                &lt;div class=&quot;w-2 h-2 rounded-full bg-blue-500&quot;&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;VA Psychiatrist (2012)&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-slate-400&quot;&gt;→&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;Opines onset &quot;while on active duty&quot; (conflicts with CP exam)&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2&quot;&gt;
+                                            &lt;div class=&quot;flex items-center gap-1&quot;&gt;
+                                                &lt;div class=&quot;w-2 h-2 rounded-full bg-amber-500&quot;&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;text-slate-700 font-medium&quot;&gt;RO Decision&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-slate-400&quot;&gt;→&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600&quot;&gt;Relied on CP exam without addressing contradiction&lt;/span&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class=&quot;flex items-center gap-2 bg-white rounded p-2 border border-blue-200&quot;&gt;
+                                            &lt;div class=&quot;flex items-center gap-1&quot;&gt;
+                                                &lt;div class=&quot;w-2 h-2 rounded-full bg-red-500&quot;&gt;&lt;/div&gt;
+                                                &lt;span class=&quot;text-slate-700 font-bold&quot;&gt;BVA Remand&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;span class=&quot;text-slate-400&quot;&gt;→&lt;/span&gt;
+                                            &lt;span class=&quot;text-slate-600 font-medium&quot;&gt;Identifies gap in analysis, orders new exam to resolve conflict&lt;/span&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Claim Timeline &amp; Deadlines --&gt;
+                                &lt;div class=&quot;border border-green-200 rounded-lg overflow-hidden&quot;&gt;
+                                    &lt;div class=&quot;bg-green-50 px-3 py-2 border-b border-green-200&quot;&gt;
+                                        &lt;h4 class=&quot;font-bold text-green-900 text-xs flex items-center&quot;&gt;
+                                            &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;schedule&lt;/span&gt;
+                                            Claim Timeline &amp;amp; Critical Deadlines
+                                        &lt;/h4&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white p-3&quot;&gt;
+                                        &lt;div class=&quot;space-y-3&quot;&gt;
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-blue-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-full bg-blue-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Jun 2015&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;Initial RO Denial&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;Original claim denied by Regional Office&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-purple-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-full bg-purple-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Mar 2019&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;C&amp;amp;P Examination&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;VA examination conducted for reopened claim&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-blue-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-full bg-blue-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Jun 2020&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;First BVA Remand&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;Board remands for SSA records&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-red-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-full bg-red-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Jul 2020&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;RO Denial on Remand&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;Regional Office denies claim after remand development&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-amber-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-full bg-amber-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Sep 2020&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;Notice of Disagreement Filed&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;Appellant appeals July 2020 denial, selects Direct Review docket&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Timeline Entry --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-green-500&quot;&gt;&lt;/div&gt;
+                                                    &lt;div class=&quot;w-0.5 h-8 bg-green-200&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1 pb-2&quot;&gt;
+                                                    &lt;div class=&quot;flex items-center gap-2 mb-1&quot;&gt;
+                                                        &lt;span class=&quot;text-[11px] font-mono text-slate-500&quot;&gt;Mar 2024&lt;/span&gt;
+                                                        &lt;span class=&quot;text-xs font-semibold text-slate-800&quot;&gt;BVA Remand Decision&lt;/span&gt;
+                                                        &lt;span class=&quot;bg-green-100 text-green-700 text-[9px] px-1.5 py-0.5 rounded font-medium&quot;&gt;CURRENT&lt;/span&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;p class=&quot;text-[10px] text-slate-600&quot;&gt;Board finds inadequate examination, remands for addendum opinion&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;!-- Next Steps --&gt;
+                                            &lt;div class=&quot;flex gap-3&quot;&gt;
+                                                &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                                                    &lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-slate-300 border-2 border-slate-400&quot;&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;flex-1&quot;&gt;
+                                                    &lt;div class=&quot;bg-blue-50 border border-blue-200 rounded p-2&quot;&gt;
+                                                        &lt;div class=&quot;text-[10px] text-blue-900 font-semibold mb-1 flex items-center&quot;&gt;
+                                                            &lt;span class=&quot;material-symbols-outlined text-xs mr-1&quot;&gt;upcoming&lt;/span&gt;
+                                                            Next Actions Required
+                                                        &lt;/div&gt;
+                                                        &lt;div class=&quot;space-y-1 text-[10px] text-slate-700&quot;&gt;
+                                                            &lt;div class=&quot;flex items-start gap-1&quot;&gt;
+                                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;1.&lt;/span&gt;
+                                                                &lt;span&gt;RO to schedule new VA examination&lt;/span&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;flex items-start gap-1&quot;&gt;
+                                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;2.&lt;/span&gt;
+                                                                &lt;span&gt;Examiner must address Nov 2012 and Mar 2017 VA opinions&lt;/span&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;flex items-start gap-1&quot;&gt;
+                                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;3.&lt;/span&gt;
+                                                                &lt;span&gt;Determine if psychiatric disability onset during ADT (Apr-Sep 1972)&lt;/span&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;flex items-start gap-1&quot;&gt;
+                                                                &lt;span class=&quot;text-blue-600 mt-0.5&quot;&gt;4.&lt;/span&gt;
+                                                                &lt;span&gt;RO to issue new rating decision&lt;/span&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;!-- Deadline Alert --&gt;
+                                        &lt;div class=&quot;mt-3 bg-amber-50 border border-amber-300 rounded p-2&quot;&gt;
+                                            &lt;div class=&quot;flex items-start gap-2&quot;&gt;
+                                                &lt;span class=&quot;material-symbols-outlined text-amber-600 text-sm&quot;&gt;warning&lt;/span&gt;
+                                                &lt;div class=&quot;text-[10px]&quot;&gt;
+                                                    &lt;span class=&quot;font-semibold text-amber-900&quot;&gt;Appeal Rights:&lt;/span&gt;
+                                                    &lt;span class=&quot;text-slate-700&quot;&gt; If new rating decision unfavorable, claimant has 1 year from decision date to file Supplemental Claim or appeal to Court of Appeals for Veterans Claims (CAVC)&lt;/span&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Summary Statistics --&gt;
+                                &lt;div class=&quot;bg-slate-50 border border-slate-200 rounded-lg p-3&quot;&gt;
+                                    &lt;p class=&quot;text-xs text-slate-600 font-medium mb-2 flex items-center&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-sm mr-1&quot;&gt;query_stats&lt;/span&gt;
+                                        Processing Statistics
+                                    &lt;/p&gt;
+                                    &lt;div class=&quot;grid grid-cols-2 gap-2 text-[11px] text-slate-600&quot;&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Documents:&lt;/span&gt; 3 analyzed&lt;/div&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Pages:&lt;/span&gt; 47 total&lt;/div&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Citations:&lt;/span&gt; 8 extracted&lt;/div&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Cross-refs:&lt;/span&gt; 12 verified&lt;/div&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Time period:&lt;/span&gt; 1972-2024&lt;/div&gt;
+                                        &lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Avg confidence:&lt;/span&gt; 96.5%&lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;!-- Download Report Buttons --&gt;
+                                &lt;div class=&quot;space-y-3 mt-4&quot;&gt;
+                                    &lt;a href=&quot;https://r2.vaclaims.net/file/site/VA_Claim_Analysis_Report_Premium.pdf&quot; target=&quot;_blank&quot; class=&quot;block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold text-sm py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-lg&quot;&gt;download&lt;/span&gt;
+                                        Download Full Analysis Report (PDF)
+                                    &lt;/a&gt;
+                                    &lt;a href=&quot;https://r2.vaclaims.net/file/site/VA_Claims_AI_Research_Report.pdf&quot; target=&quot;_blank&quot; class=&quot;block w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold text-sm py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2&quot;&gt;
+                                        &lt;span class=&quot;material-symbols-outlined text-lg&quot;&gt;science&lt;/span&gt;
+                                        Download AI Research Report (PDF)
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                &lt;button onclick=&quot;resetDemo()&quot; class=&quot;w-full text-center text-xs text-slate-400 hover:text-slate-600 mt-4 underline flex items-center justify-center gap-1&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;refresh&lt;/span&gt; Reset Analysis
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;!-- Tab Content: Before &amp; After --&gt;
+        &lt;div id=&quot;demo-difference&quot; class=&quot;tab-content&quot;&gt;
+            &lt;div class=&quot;max-w-6xl mx-auto&quot;&gt;
+                &lt;div class=&quot;grid md:grid-cols-2 gap-8 mb-8&quot;&gt;
+                    &lt;!-- Before --&gt;
+                    &lt;div class=&quot;bg-slate-50 rounded-xl border-2 border-slate-300 p-6&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-4&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-red-500&quot;&gt;close&lt;/span&gt;
+                            &lt;h3 class=&quot;font-bold text-slate-900&quot;&gt;Before: Manual Review&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;bg-white p-4 rounded-lg border border-slate-200 text-sm text-slate-600 font-mono leading-relaxed h-64 overflow-y-auto&quot;&gt;
+                            &lt;p class=&quot;mb-2&quot;&gt;[...] The Veteran's OSA is shown to be causally related to their active service via a medical nexus opinion that links the condition to in-service weight gain secondary to a service-connected knee injury. A private medical opinion from Dr. Smith, dated October 12, 2022, was submitted. Dr. Smith opined that it is &quot;at least as likely as not&quot; that the Veteran's OSA is aggravated by obesity. The doctor further explained that the Veteran's service-connected knee condition prevents cardiovascular exercise, leading to a BMI increase from 24 to 32 since discharge. The VA examiner, in a June 2023 addendum, conceded that the medical literature supports a link between obesity and OSA, and did not offer a contrary etiology [...]&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-xs text-slate-500 mt-4&quot;&gt;Manual extraction takes 15-30 minutes per decision&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- After --&gt;
+                    &lt;div class=&quot;bg-blue-50 rounded-xl border-2 border-blue-500 p-6&quot;&gt;
+                        &lt;div class=&quot;flex items-center gap-2 mb-4&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-green-500&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;h3 class=&quot;font-bold text-slate-900&quot;&gt;After: AI Extraction&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;bg-white p-4 rounded-lg border border-blue-200 h-64 overflow-y-auto space-y-3&quot;&gt;
+                            &lt;div class=&quot;text-sm&quot;&gt;
+                                &lt;div class=&quot;flex items-start gap-2 mb-2&quot;&gt;
+                                    &lt;span class=&quot;bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium&quot;&gt;GRANTED&lt;/span&gt;
+                                    &lt;strong class=&quot;text-slate-900&quot;&gt;Sleep Apnea&lt;/strong&gt;
+                                &lt;/div&gt;
+                                &lt;p class=&quot;text-slate-600 text-xs mb-2&quot;&gt;Secondary service connection (obesity intermediate)&lt;/p&gt;
+                                &lt;div class=&quot;bg-blue-50 p-2 rounded text-xs text-blue-800 flex items-start gap-1&quot;&gt;
+                                    &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;link&lt;/span&gt;
+                                    &lt;span&gt;Source: &quot;Board finds that sleep apnea is proximately due...&quot; (pg. 4, ¶3)&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;text-sm border-t border-slate-200 pt-3&quot;&gt;
+                                &lt;strong class=&quot;text-slate-900&quot;&gt;Key Evidence:&lt;/strong&gt;
+                                &lt;ul class=&quot;text-xs text-slate-600 mt-2 space-y-1 ml-4&quot;&gt;
+                                    &lt;li&gt;• Private opinion: Dr. Smith (Oct 2022) - nexus link&lt;/li&gt;
+                                    &lt;li&gt;• VA examiner concession (June 2023 addendum)&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;text-xs text-green-700 font-semibold mt-4&quot;&gt;Automated extraction in under 60 seconds&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Takeaways --&gt;
+                &lt;div class=&quot;bg-slate-50 rounded-lg p-6 border border-slate-200&quot;&gt;
+                    &lt;h4 class=&quot;font-bold text-slate-900 mb-4 text-center&quot;&gt;Why This Works&lt;/h4&gt;
+                    &lt;div class=&quot;grid md:grid-cols-3 gap-6&quot;&gt;
+                        &lt;div class=&quot;flex items-start gap-3&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-2xl&quot;&gt;link&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;font-semibold text-slate-900 text-sm&quot;&gt;Every claim tied to source&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-600&quot;&gt;Direct citations with page + paragraph references&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-start gap-3&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-2xl&quot;&gt;fact_check&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;font-semibold text-slate-900 text-sm&quot;&gt;Human verification step&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-600&quot;&gt;Attorney review before finalization&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-start gap-3&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-2xl&quot;&gt;download&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;p class=&quot;font-semibold text-slate-900 text-sm&quot;&gt;Export-ready formats&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-600&quot;&gt;Memo, brief, JSON for case management&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;/section&gt;
+
+    &lt;!-- Social Proof Section --&gt;
+    &lt;section class=&quot;py-16 bg-white border-y border-slate-200&quot;&gt;
+        &lt;div class=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h2 class=&quot;text-3xl font-bold text-slate-900 serif mb-4&quot;&gt;Trusted by VA Practitioners&lt;/h2&gt;
+                &lt;p class=&quot;text-slate-600&quot;&gt;Early pilots show measurable workflow improvements&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Metrics --&gt;
+            &lt;div class=&quot;grid md:grid-cols-3 gap-8 mb-12&quot;&gt;
+                &lt;div class=&quot;text-center p-6 bg-blue-50 rounded-xl border border-blue-200&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-bold text-blue-900 mb-2&quot;&gt;~50%&lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-slate-600&quot;&gt;Reduction in review time&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-center p-6 bg-blue-50 rounded-xl border border-blue-200&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-bold text-blue-900 mb-2&quot;&gt;2-3×&lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-slate-600&quot;&gt;Faster evidence triage in pilots&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;text-center p-6 bg-blue-50 rounded-xl border border-blue-200&quot;&gt;
+                    &lt;div class=&quot;text-4xl font-bold text-blue-900 mb-2&quot;&gt;100%&lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-slate-600&quot;&gt;Citation traceability on outputs&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Testimonials --&gt;
+            &lt;div class=&quot;grid md:grid-cols-3 gap-6&quot;&gt;
+                &lt;div class=&quot;bg-slate-50 p-6 rounded-xl border border-slate-200&quot;&gt;
+                    &lt;div class=&quot;flex items-start gap-2 mb-3&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;format_quote&lt;/span&gt;
+                        &lt;p class=&quot;text-sm text-slate-700 italic leading-relaxed&quot;&gt;
+                            &quot;We cut decision analysis time in half. Every finding includes the exact source location—critical for our review process.&quot;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-semibold text-slate-900&quot;&gt;— Mid-sized VA practice&lt;/p&gt;
+                    &lt;p class=&quot;text-xs text-slate-500&quot;&gt;3-attorney firm, East Coast&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-slate-50 p-6 rounded-xl border border-slate-200&quot;&gt;
+                    &lt;div class=&quot;flex items-start gap-2 mb-3&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;format_quote&lt;/span&gt;
+                        &lt;p class=&quot;text-sm text-slate-700 italic leading-relaxed&quot;&gt;
+                            &quot;The system doesn't guess. It shows us where it found the information. That credibility matters when we're building cases.&quot;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-semibold text-slate-900&quot;&gt;— VSO Representative&lt;/p&gt;
+                    &lt;p class=&quot;text-xs text-slate-500&quot;&gt;Regional office pilot&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bg-slate-50 p-6 rounded-xl border border-slate-200&quot;&gt;
+                    &lt;div class=&quot;flex items-start gap-2 mb-3&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;format_quote&lt;/span&gt;
+                        &lt;p class=&quot;text-sm text-slate-700 italic leading-relaxed&quot;&gt;
+                            &quot;Finally, AI that understands we need defensible outputs. The human review step keeps our quality standards intact.&quot;
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-xs font-semibold text-slate-900&quot;&gt;— Solo practitioner&lt;/p&gt;
+                    &lt;p class=&quot;text-xs text-slate-500&quot;&gt;VA-accredited attorney&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Badges --&gt;
+            &lt;div class=&quot;flex justify-center gap-6 mt-12 flex-wrap&quot;&gt;
+                &lt;div class=&quot;flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-lg border border-slate-300&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-blue-700&quot;&gt;gavel&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-semibold text-slate-900&quot;&gt;Built for BVA decisions&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-lg border border-slate-300&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-blue-700&quot;&gt;health_and_safety&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-semibold text-slate-900&quot;&gt;VA workflow focused&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Why Defensible Section --&gt;
+    &lt;section class=&quot;py-16 bg-blue-900&quot;&gt;
+        &lt;div class=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-white serif mb-6&quot;&gt;Why This Doesn't Hallucinate&lt;/h2&gt;
+            &lt;p class=&quot;text-blue-100 mb-10 text-lg&quot;&gt;Three-layer verification ensures accuracy&lt;/p&gt;
+
+            &lt;div class=&quot;grid md:grid-cols-3 gap-6&quot;&gt;
+                &lt;div class=&quot;bg-blue-800/50 backdrop-blur p-6 rounded-xl border border-blue-700&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-4xl text-blue-300 mb-4 block&quot;&gt;link&lt;/span&gt;
+                    &lt;h3 class=&quot;font-bold text-white mb-2&quot;&gt;Citation-first extraction&lt;/h3&gt;
+                    &lt;p class=&quot;text-sm text-blue-200&quot;&gt;Every statement must link to a source document location&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-blue-800/50 backdrop-blur p-6 rounded-xl border border-blue-700&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-4xl text-blue-300 mb-4 block&quot;&gt;group_work&lt;/span&gt;
+                    &lt;h3 class=&quot;font-bold text-white mb-2&quot;&gt;Cross-checking agents&lt;/h3&gt;
+                    &lt;p class=&quot;text-sm text-blue-200&quot;&gt;Multiple AI models verify each other's outputs&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-blue-800/50 backdrop-blur p-6 rounded-xl border border-blue-700&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-4xl text-blue-300 mb-4 block&quot;&gt;person_check&lt;/span&gt;
+                    &lt;h3 class=&quot;font-bold text-white mb-2&quot;&gt;Human-in-the-loop approval&lt;/h3&gt;
+                    &lt;p class=&quot;text-sm text-blue-200&quot;&gt;Attorney reviews and approves before finalization&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Capabilities Section (3 Pillars) --&gt;
+    &lt;section id=&quot;services&quot; class=&quot;py-20 bg-slate-50&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;text-center mb-16&quot;&gt;
+                &lt;h2 class=&quot;text-3xl font-bold text-slate-900 serif&quot;&gt;Core Capabilities&lt;/h2&gt;
+                &lt;p class=&quot;mt-4 text-slate-600&quot;&gt;Three pillars of defensible AI for VA claims work&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;grid md:grid-cols-3 gap-8&quot;&gt;
+                &lt;!-- Pillar 1: Evidence Intelligence --&gt;
+                &lt;div class=&quot;bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-200 hover:shadow-xl transition duration-300&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 mb-6 mx-auto&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-4xl&quot;&gt;search_insights&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-slate-900 mb-4 text-center&quot;&gt;Evidence Intelligence&lt;/h3&gt;
+                    &lt;ul class=&quot;space-y-3 text-slate-700&quot;&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Multi-doc extraction across C-files and decisions&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Source linking with page + paragraph references&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Decision reasoning capture for appeal strategy&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-blue-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Medical record timeline extraction&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Pillar 2: Workflow Design --&gt;
+                &lt;div class=&quot;bg-white p-8 rounded-2xl shadow-lg border-2 border-amber-200 hover:shadow-xl transition duration-300&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center text-amber-700 mb-6 mx-auto&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-4xl&quot;&gt;account_tree&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-slate-900 mb-4 text-center&quot;&gt;Workflow Design&lt;/h3&gt;
+                    &lt;ul class=&quot;space-y-3 text-slate-700&quot;&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Review checkpoints at critical decision points&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Agent orchestration for multi-step analysis&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Custom outputs (memos, briefs, case summaries)&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-amber-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Integration with existing case management&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Pillar 3: Defensible AI --&gt;
+                &lt;div class=&quot;bg-white p-8 rounded-2xl shadow-lg border-2 border-green-200 hover:shadow-xl transition duration-300&quot;&gt;
+                    &lt;div class=&quot;w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center text-green-700 mb-6 mx-auto&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-4xl&quot;&gt;verified_user&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-slate-900 mb-4 text-center&quot;&gt;Defensible AI&lt;/h3&gt;
+                    &lt;ul class=&quot;space-y-3 text-slate-700&quot;&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-green-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Traceability: every claim traces to source&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-green-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Explainability: clear reasoning chains&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-green-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Audit-ready logs of all AI decisions&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start gap-2&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-green-600 text-xl mt-0.5&quot;&gt;check_circle&lt;/span&gt;
+                            &lt;span class=&quot;text-sm&quot;&gt;Staff training on verification protocols&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Engagement Models --&gt;
+    &lt;section id=&quot;engagement&quot; class=&quot;py-20 bg-white border-t border-slate-200&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-slate-900 text-center serif mb-6&quot;&gt;Engagement Models&lt;/h2&gt;
+            &lt;p class=&quot;text-center text-slate-600 mb-16 max-w-2xl mx-auto&quot;&gt;
+                Flexible engagement options from quick assessments to full production implementation
+            &lt;/p&gt;
+
+            &lt;!-- Timeline --&gt;
+            &lt;div class=&quot;relative max-w-5xl mx-auto&quot;&gt;
+                &lt;!-- Connection Line --&gt;
+                &lt;div class=&quot;hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-green-600&quot; style=&quot;top: 80px;&quot;&gt;&lt;/div&gt;
+
+                &lt;div class=&quot;grid md:grid-cols-3 gap-8 relative&quot;&gt;
+                    &lt;!-- Phase 1 --&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;div class=&quot;bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300&quot;&gt;
+                            &lt;div class=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase&quot;&gt;
+                                Phase 1
+                            &lt;/div&gt;
+                            &lt;div class=&quot;text-center mt-4 mb-6&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-5xl text-blue-600 mb-3 block&quot;&gt;assessment&lt;/span&gt;
+                                &lt;h3 class=&quot;text-xl font-bold text-slate-900 mb-2&quot;&gt;Workflow Assessment&lt;/h3&gt;
+                                &lt;p class=&quot;text-sm text-blue-600 font-semibold mb-4&quot;&gt;1-2 weeks&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-blue-50 rounded-lg p-3 mb-4 border border-blue-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-blue-900 mb-1&quot;&gt;What happens:&lt;/p&gt;
+                                &lt;ul class=&quot;text-xs text-slate-700 space-y-1&quot;&gt;
+                                    &lt;li&gt;• Workflow mapping session&lt;/li&gt;
+                                    &lt;li&gt;• Risk assessment review&lt;/li&gt;
+                                    &lt;li&gt;• ROI opportunity analysis&lt;/li&gt;
+                                    &lt;li&gt;• Phased implementation roadmap&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-green-50 rounded-lg p-3 mb-6 border border-green-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-green-900 mb-1&quot;&gt;Best for:&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-700&quot;&gt;Teams exploring AI safely and want clear understanding of risks + benefits before committing&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;button onclick=&quot;openModal('assessment')&quot; class=&quot;w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md&quot;&gt;
+                                Request Assessment
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Phase 2 --&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;div class=&quot;bg-white border-2 border-amber-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300&quot;&gt;
+                            &lt;div class=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase&quot;&gt;
+                                Phase 2
+                            &lt;/div&gt;
+                            &lt;div class=&quot;text-center mt-4 mb-6&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-5xl text-amber-600 mb-3 block&quot;&gt;rocket_launch&lt;/span&gt;
+                                &lt;h3 class=&quot;text-xl font-bold text-slate-900 mb-2&quot;&gt;Prototype Sprint&lt;/h3&gt;
+                                &lt;p class=&quot;text-sm text-amber-600 font-semibold mb-4&quot;&gt;2-4 weeks&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-amber-50 rounded-lg p-3 mb-4 border border-amber-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-amber-900 mb-1&quot;&gt;What happens:&lt;/p&gt;
+                                &lt;ul class=&quot;text-xs text-slate-700 space-y-1&quot;&gt;
+                                    &lt;li&gt;• Build one high-impact workflow&lt;/li&gt;
+                                    &lt;li&gt;• Rapid development iteration&lt;/li&gt;
+                                    &lt;li&gt;• Working demo with your data&lt;/li&gt;
+                                    &lt;li&gt;• Performance metrics captured&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-green-50 rounded-lg p-3 mb-6 border border-green-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-green-900 mb-1&quot;&gt;Best for:&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-700&quot;&gt;Validating one workflow fast with measurable results before broader rollout&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;w-full py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition shadow-md&quot;&gt;
+                                Discuss Sprint
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Phase 3 --&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;div class=&quot;bg-white border-2 border-green-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300&quot;&gt;
+                            &lt;div class=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase&quot;&gt;
+                                Phase 3
+                            &lt;/div&gt;
+                            &lt;div class=&quot;text-center mt-4 mb-6&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-5xl text-green-600 mb-3 block&quot;&gt;deployed_code&lt;/span&gt;
+                                &lt;h3 class=&quot;text-xl font-bold text-slate-900 mb-2&quot;&gt;Implementation&lt;/h3&gt;
+                                &lt;p class=&quot;text-sm text-green-600 font-semibold mb-4&quot;&gt;8-12 weeks&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-green-50 rounded-lg p-3 mb-4 border border-green-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-green-900 mb-1&quot;&gt;What happens:&lt;/p&gt;
+                                &lt;ul class=&quot;text-xs text-slate-700 space-y-1&quot;&gt;
+                                    &lt;li&gt;• Production system architecture&lt;/li&gt;
+                                    &lt;li&gt;• Full integration with your stack&lt;/li&gt;
+                                    &lt;li&gt;• QA validation test sets&lt;/li&gt;
+                                    &lt;li&gt;• Staff training + documentation&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;bg-green-50 rounded-lg p-3 mb-6 border border-green-200&quot;&gt;
+                                &lt;p class=&quot;text-xs font-bold text-green-900 mb-1&quot;&gt;Best for:&lt;/p&gt;
+                                &lt;p class=&quot;text-xs text-slate-700&quot;&gt;Production use with comprehensive QA, training, and ongoing support&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition shadow-md&quot;&gt;
+                                Discuss Implementation
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Optional Scarcity Note --&gt;
+            &lt;div class=&quot;mt-12 text-center&quot;&gt;
+                &lt;p class=&quot;text-sm text-slate-500 bg-slate-50 inline-block px-6 py-3 rounded-lg border border-slate-200&quot;&gt;
+                    &lt;span class=&quot;material-symbols-outlined text-amber-600 text-base align-middle mr-1&quot;&gt;info&lt;/span&gt;
+                    Limited pilot slots monthly to maintain reviewer QA quality
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- About Me Section (Shorter Version) --&gt;
+    &lt;section id=&quot;about&quot; class=&quot;py-16 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white&quot;&gt;
+        &lt;div class=&quot;max-w-5xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;flex flex-col md:flex-row items-center gap-12&quot;&gt;
+                &lt;!-- Image --&gt;
+                &lt;div class=&quot;w-full md:w-1/4 flex justify-center&quot;&gt;
+                    &lt;div class=&quot;relative&quot;&gt;
+                        &lt;div class=&quot;absolute inset-0 bg-blue-600 rounded-2xl transform rotate-3 z-0 opacity-30&quot;&gt;&lt;/div&gt;
+                        &lt;img src=&quot;https://r2.vaclaims.net/file/site/me.png&quot; alt=&quot;Christopher Combs - Founder&quot; class=&quot;relative z-10 w-48 h-48 object-cover rounded-2xl shadow-2xl border-2 border-blue-400&quot; style=&quot;object-position: center 20%;&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- Content --&gt;
+                &lt;div class=&quot;w-full md:w-3/4 text-center md:text-left&quot;&gt;
+                    &lt;div class=&quot;inline-block bg-blue-800 text-blue-200 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider mb-3&quot;&gt;
+                        Built by an Expert
+                    &lt;/div&gt;
+                    &lt;h3 class=&quot;text-3xl font-bold text-white serif mb-2&quot;&gt;Christopher Combs&lt;/h3&gt;
+                    &lt;p class=&quot;text-blue-200 font-medium mb-6&quot;&gt;Founder • AI Engineer • VA Legal Tech Specialist&lt;/p&gt;
+
+                    &lt;div class=&quot;text-slate-300 leading-relaxed space-y-3&quot;&gt;
+                        &lt;p class=&quot;text-base&quot;&gt;
+                            Specialized in high-stakes AI for veterans' benefits law. I build systems where mistakes matter—deploying models only when they can be grounded, cited, and verified.
+                        &lt;/p&gt;
+                        &lt;div class=&quot;flex flex-wrap gap-3 pt-4&quot;&gt;
+                            &lt;span class=&quot;bg-blue-900/50 text-blue-200 px-3 py-1 rounded-lg text-sm border border-blue-700&quot;&gt;VA Domain Focus&lt;/span&gt;
+                            &lt;span class=&quot;bg-blue-900/50 text-blue-200 px-3 py-1 rounded-lg text-sm border border-blue-700&quot;&gt;Production AI Systems&lt;/span&gt;
+                            &lt;span class=&quot;bg-blue-900/50 text-blue-200 px-3 py-1 rounded-lg text-sm border border-blue-700&quot;&gt;Legal Tech Experience&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;mt-6 inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition shadow-lg group&quot;&gt;
+                        Schedule a Call
+                        &lt;span class=&quot;material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition&quot;&gt;arrow_forward&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Full Founder Bio (Optional - Can be removed if too long) --&gt;
+    &lt;section class=&quot;py-12 bg-slate-50 border-t border-slate-200&quot;&gt;
+        &lt;div class=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-8&quot;&gt;
+                &lt;h3 class=&quot;text-xl font-bold text-slate-900 mb-4 serif&quot;&gt;Why Work With Me&lt;/h3&gt;
+                &lt;div class=&quot;prose prose-sm text-slate-600 leading-relaxed space-y-4&quot;&gt;
+                    &lt;p&gt;
+                        I've spent years building AI systems in environments where accuracy isn't optional. My background combines software engineering, machine learning operations, and a deep understanding of the VA claims process.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        Unlike generalist AI consultants, I specialize exclusively in veterans' benefits work. I understand M21-1, 38 CFR, BVA decision structure, and the nuances of secondary service connection arguments. This domain expertise means I can design systems that actually fit your workflow.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        My philosophy: &lt;strong&gt;Deploy AI only where it can be verified.&lt;/strong&gt; No black boxes, no &quot;trust the model&quot; answers. Every output includes provenance, every claim traces to a source, and human review is always part of the process.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Professional Positioning Note --&gt;
+    &lt;section class=&quot;bg-slate-900 py-12 text-slate-300 border-y border-slate-800&quot;&gt;
+        &lt;div class=&quot;max-w-4xl mx-auto px-4 text-center&quot;&gt;
+            &lt;div class=&quot;flex items-center justify-center gap-2 mb-4&quot;&gt;
+                &lt;span class=&quot;material-symbols-outlined text-3xl text-blue-400&quot;&gt;gavel&lt;/span&gt;
+                &lt;h3 class=&quot;text-xl font-bold text-white serif&quot;&gt;Built for Legal Professionals&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;p class=&quot;text-base text-slate-300 leading-relaxed&quot;&gt;
+                These AI systems &lt;strong class=&quot;text-white&quot;&gt;augment your expertise—they don't replace it.&lt;/strong&gt; Every output includes verifiable citations, traceable reasoning, and structured formats designed for attorney review. All AI-generated content serves as working drafts, subject to your firm's quality standards and ethical obligations.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Recruiter Section --&gt;
+    &lt;section class=&quot;py-16 bg-slate-900 text-slate-300 border-t border-slate-800&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;lg:grid lg:grid-cols-2 gap-12 items-center&quot;&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;inline-block bg-indigo-900 text-indigo-200 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider mb-4&quot;&gt;For Engineering Teams&lt;/div&gt;
+                    &lt;p class=&quot;mb-6 leading-relaxed&quot;&gt;
+                        Hiring for production AI/ML engineering roles? My approach to deploying LLMs in high-stakes environments: reliable architecture, rigorous validation, and operational controls from day one.
+                    &lt;/p&gt;
+
+                    &lt;ul class=&quot;space-y-4 mb-8&quot;&gt;
+                        &lt;li class=&quot;flex items-start&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-indigo-400 mr-3&quot;&gt;psychology&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;strong class=&quot;text-white&quot;&gt;LLM Systems Design:&lt;/strong&gt; Production RAG architectures, structured extraction pipelines, and model evaluation frameworks.
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-indigo-400 mr-3&quot;&gt;verified_user&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;strong class=&quot;text-white&quot;&gt;Production Rigor:&lt;/strong&gt; Comprehensive observability, quality assurance workflows, and quantifiable performance metrics.
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;flex items-start&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined text-indigo-400 mr-3&quot;&gt;account_tree&lt;/span&gt;
+                            &lt;div&gt;
+                                &lt;strong class=&quot;text-white&quot;&gt;Systems Thinking:&lt;/strong&gt; Transforming complex, unstructured processes into reliable, scalable automation.
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;mt-8 lg:mt-0 relative&quot;&gt;
+                    &lt;img src=&quot;https://r2.vaclaims.net/file/site/siteimg.png&quot; class=&quot;rounded-xl shadow-2xl border border-slate-700 opacity-80 hover:opacity-100 transition duration-500&quot; alt=&quot;System Architecture Diagram&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- FAQ Section --&gt;
+    &lt;section class=&quot;py-20 bg-slate-50 border-t border-slate-200&quot;&gt;
+        &lt;div class=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;text-center mb-12&quot;&gt;
+                &lt;h2 class=&quot;text-3xl font-bold text-slate-900 serif mb-4&quot;&gt;Frequently Asked Questions&lt;/h2&gt;
+                &lt;p class=&quot;text-slate-600&quot;&gt;Common questions about our AI systems and approach&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;space-y-6&quot;&gt;
+                &lt;!-- FAQ 1 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        How do you prevent hallucinations?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Three layers: (1) Citation-first extraction—every statement must link to a source document, (2) Cross-checking agents that verify each other's outputs, (3) Mandatory human review before finalization. We don't generate unsupported claims.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 2 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        Are all outputs cited?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Yes. Every extracted fact includes a reference to the source document with page and paragraph location. Attorneys can verify claims in seconds, not minutes.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 3 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        Can you handle redacted or PHI-containing documents?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Yes. We work with redacted BVA decisions and can deploy on-premise or in your secure cloud environment to handle PHI under BAAs. Security and compliance are built-in from day one.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 4 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        Is this SaaS or consulting?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Consulting-first. I build custom workflows tailored to your firm's specific needs, not one-size-fits-all software. Each engagement includes architecture design, implementation, and staff training. Production systems can be cloud-hosted or on-premise.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 5 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        How is pricing structured?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Project-based pricing tied to scope and deliverables. Assessment phase is fixed-fee. Prototype sprints and implementation are quoted after assessment. No recurring SaaS fees—you own what we build.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 6 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        Does this replace attorneys?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        Absolutely not. These systems augment attorney expertise by accelerating evidence review, drafting first-pass analysis, and surfacing relevant case law. Final decisions, strategy, and client communication always require professional judgment. Think of it as a research assistant, not a replacement.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FAQ 7 --&gt;
+                &lt;div class=&quot;bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition&quot;&gt;
+                    &lt;h3 class=&quot;font-bold text-slate-900 mb-3 flex items-start gap-2&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-600&quot;&gt;help&lt;/span&gt;
+                        What about confidentiality and NDAs?
+                    &lt;/h3&gt;
+                    &lt;p class=&quot;text-slate-600 text-sm leading-relaxed ml-8&quot;&gt;
+                        All engagements include NDAs as standard. Your data, workflows, and case strategies remain confidential. We can work with your existing data security and compliance requirements.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Final CTA Section --&gt;
+    &lt;section class=&quot;py-16 bg-blue-900 text-white&quot;&gt;
+        &lt;div class=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold serif mb-4&quot;&gt;Ready to Cut Review Time in Half?&lt;/h2&gt;
+            &lt;p class=&quot;text-blue-100 text-lg mb-8&quot;&gt;
+                Book a 15-minute workflow audit—no sales pitch, just examples and fit assessment
+            &lt;/p&gt;
+            &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;inline-flex items-center bg-white text-blue-900 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition shadow-lg text-lg&quot;&gt;
+                &lt;span class=&quot;material-symbols-outlined mr-2&quot;&gt;calendar_today&lt;/span&gt;
+                Book Your Workflow Audit
+            &lt;/button&gt;
+            &lt;p class=&quot;text-blue-200 text-sm mt-6&quot;&gt;
+                Or &lt;button onclick=&quot;openModal('assessment')&quot; class=&quot;underline hover:text-white&quot;&gt;request a full workflow assessment&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class=&quot;bg-slate-900 text-slate-300 py-12&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;grid md:grid-cols-3 gap-8 mb-8&quot;&gt;
+                &lt;!-- Column 1: Brand --&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-blue-400 text-3xl mr-2&quot;&gt;balance&lt;/span&gt;
+                        &lt;span class=&quot;font-bold text-xl text-white serif&quot;&gt;VA Claims&lt;span class=&quot;text-blue-400&quot;&gt;AI&lt;/span&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;text-sm text-slate-400 leading-relaxed&quot;&gt;
+                        Defensible AI systems for VA claims professionals. Built for traceability, accuracy, and human oversight.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Column 2: Quick Links --&gt;
+                &lt;div&gt;
+                    &lt;h4 class=&quot;font-bold text-white mb-4&quot;&gt;Quick Links&lt;/h4&gt;
+                    &lt;ul class=&quot;space-y-2 text-sm&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#demo&quot; class=&quot;hover:text-blue-400 transition&quot;&gt;Live Demo&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#services&quot; class=&quot;hover:text-blue-400 transition&quot;&gt;Capabilities&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#engagement&quot; class=&quot;hover:text-blue-400 transition&quot;&gt;Engagement Models&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#about&quot; class=&quot;hover:text-blue-400 transition&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Column 3: Contact --&gt;
+                &lt;div&gt;
+                    &lt;h4 class=&quot;font-bold text-white mb-4&quot;&gt;Get Started&lt;/h4&gt;
+                    &lt;ul class=&quot;space-y-3 text-sm&quot;&gt;
+                        &lt;li&gt;
+                            &lt;button onclick=&quot;openModal('consultation')&quot; class=&quot;text-blue-400 hover:text-blue-300 transition flex items-center gap-1&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;calendar_today&lt;/span&gt;
+                                Book Workflow Audit
+                            &lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;button onclick=&quot;openModal('assessment')&quot; class=&quot;text-blue-400 hover:text-blue-300 transition flex items-center gap-1&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;assessment&lt;/span&gt;
+                                Request Assessment
+                            &lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;pt-2 border-t border-slate-700&quot;&gt;
+                            &lt;a href=&quot;mailto:contact@example.com&quot; class=&quot;text-slate-400 hover:text-blue-400 transition flex items-center gap-1&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;email&lt;/span&gt;
+                                contact@example.com
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;https://linkedin.com&quot; target=&quot;_blank&quot; class=&quot;text-slate-400 hover:text-blue-400 transition flex items-center gap-1&quot;&gt;
+                                &lt;span class=&quot;material-symbols-outlined text-sm&quot;&gt;link&lt;/span&gt;
+                                LinkedIn
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Bottom Bar --&gt;
+            &lt;div class=&quot;pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4&quot;&gt;
+                &lt;p class=&quot;text-xs text-slate-500&quot;&gt;
+                    © 2026 AI Consulting for VA Claims. All rights reserved.
+                &lt;/p&gt;
+                &lt;div class=&quot;flex gap-6 text-xs&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;text-slate-400 hover:text-blue-400 transition&quot;&gt;Privacy Policy&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;text-slate-400 hover:text-blue-400 transition&quot;&gt;Terms of Service&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Engagement Note --&gt;
+            &lt;div class=&quot;mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500&quot;&gt;
+                &lt;p&gt;Available for remote engagements nationwide • On-site sessions by arrangement&lt;/p&gt;
+                &lt;p class=&quot;mt-2&quot;&gt;NDA-friendly • References and work samples available upon request&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;!-- Modal Template --&gt;
+    &lt;div id=&quot;modal&quot; class=&quot;modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50&quot;&gt;
+        &lt;div class=&quot;modal-overlay absolute w-full h-full bg-slate-900 opacity-50&quot; onclick=&quot;closeModal()&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-2xl z-50 overflow-y-auto&quot;&gt;
+
+            &lt;div class=&quot;modal-content py-4 text-left px-6&quot;&gt;
+                &lt;!-- Title --&gt;
+                &lt;div class=&quot;flex justify-between items-center pb-3&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-bold text-slate-900&quot; id=&quot;modal-title&quot;&gt;Contact&lt;/p&gt;
+                    &lt;div class=&quot;modal-close cursor-pointer z-50&quot; onclick=&quot;closeModal()&quot;&gt;
+                        &lt;span class=&quot;material-symbols-outlined text-slate-500&quot;&gt;close&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Body --&gt;
+                &lt;div class=&quot;my-5&quot;&gt;
+                    &lt;p class=&quot;text-slate-600 mb-4 text-sm&quot;&gt;Fill out the form below to get started. I will respond within 24 hours.&lt;/p&gt;
+                    &lt;form class=&quot;space-y-4&quot; onsubmit=&quot;event.preventDefault(); submitForm();&quot;&gt;
+                        &lt;div&gt;
+                            &lt;label class=&quot;block text-slate-700 text-sm font-bold mb-2&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+                            &lt;input class=&quot;appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500&quot; id=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;attorney@firm.com&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label class=&quot;block text-slate-700 text-sm font-bold mb-2&quot; for=&quot;firm&quot;&gt;Organization&lt;/label&gt;
+                            &lt;input class=&quot;appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500&quot; id=&quot;firm&quot; type=&quot;text&quot; placeholder=&quot;Law Firm or VSO Name&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label class=&quot;block text-slate-700 text-sm font-bold mb-2&quot; for=&quot;message&quot;&gt;Message&lt;/label&gt;
+                            &lt;textarea class=&quot;appearance-none border rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500&quot; id=&quot;message&quot; rows=&quot;3&quot; placeholder=&quot;Briefly describe your current workflow needs...&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex justify-end pt-2&quot;&gt;
+                            &lt;button class=&quot;bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full transition&quot; type=&quot;submit&quot;&gt;
+                                Send Request
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Logic --&gt;
+    &lt;script&gt;
+        // Modal Logic
+        function openModal(type) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+
+            if (type === 'consultation') {
+                title.innerText = &quot;Book Your 15-Min Workflow Audit&quot;;
+            } else if (type === 'assessment') {
+                title.innerText = &quot;Request Risk + RAG Assessment&quot;;
+            }
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('modal-active');
+        }
+
+        function submitForm() {
+            const btn = document.querySelector('form button');
+            const originalText = btn.innerText;
+            btn.innerText = &quot;Sent!&quot;;
+            btn.classList.add('bg-green-600', 'hover:bg-green-700');
+            setTimeout(() =&gt; {
+                closeModal();
+                // Reset button style after close
+                setTimeout(() =&gt; {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                }, 500);
+            }, 1000);
+        }
+
+        // Tab Switch Logic
+        function switchTab(tabId) {
+            // Buttons
+            document.querySelectorAll('.tab-btn').forEach(btn =&gt; btn.classList.remove('active'));
+            if(tabId === 'demo-live') document.getElementById('tab-btn-live').classList.add('active');
+            if(tabId === 'demo-difference') document.getElementById('tab-btn-difference').classList.add('active');
+
+            // Content
+            document.querySelectorAll('.tab-content').forEach(content =&gt; {
+                content.classList.remove('active');
+                setTimeout(() =&gt; {
+                    if(!content.classList.contains('active')) content.style.display = 'none';
+                }, 300); // Match transition time
+            });
+
+            const activeContent = document.getElementById(tabId);
+            activeContent.style.display = 'block';
+            // Slight delay to allow display block to apply before opacity transition
+            setTimeout(() =&gt; {
+                activeContent.classList.add('active');
+            }, 10);
+        }
+
+        // Demo Logic
+        function runDemo() {
+            const scanner = document.getElementById('scanner-line');
+            const initial = document.getElementById('demo-initial');
+            const results = document.getElementById('demo-results');
+            const docViewer = document.getElementById('doc-viewer');
+
+            // Start Animation
+            initial.style.display = 'none';
+            scanner.style.display = 'block';
+
+            // Cycle through document tabs
+            const tabs = [
+                { name: 'BVA Decision', scroll: 0 },
+                { name: 'RDS (Rating)', scroll: 800 },
+                { name: 'CP Exam', scroll: 1600 }
+            ];
+
+            let currentTab = 0;
+
+            // Switch tabs during scan
+            const tabInterval = setInterval(() =&gt; {
+                currentTab++;
+                if (currentTab &lt; tabs.length) {
+                    // Scroll to document section
+                    docViewer.scrollTop = tabs[currentTab].scroll;
+
+                    // Update tab styling
+                    updateTabVisual(currentTab);
+                } else {
+                    clearInterval(tabInterval);
+                }
+            }, 650);
+
+            // Wait for scan to complete
+            setTimeout(() =&gt; {
+                clearInterval(tabInterval);
+                scanner.style.display = 'none';
+                results.classList.remove('hidden');
+                docViewer.scrollTop = 0; // Reset to top
+                updateTabVisual(0); // Reset to first tab
+            }, 2000);
+        }
+
+        function updateTabVisual(activeIndex) {
+            // Reset all tabs to inactive state
+            for (let i = 0; i &lt; 3; i++) {
+                const tab = document.getElementById(`tab-${i}`);
+                if (tab) {
+                    if (i === activeIndex) {
+                        tab.className = 'px-3 py-1.5 bg-white border border-slate-300 rounded-t text-xs font-semibold text-slate-900 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition';
+                    } else {
+                        tab.className = 'px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition';
+                    }
+                }
+            }
+        }
+
+        function switchDocTab(tabIndex) {
+            const docViewer = document.getElementById('doc-viewer');
+            const scrollPositions = [0, 1800, 3600]; // Approximate scroll positions for each document
+
+            // Update tab visual
+            updateTabVisual(tabIndex);
+
+            // Scroll to document section
+            if (docViewer) {
+                docViewer.scrollTop = scrollPositions[tabIndex];
+            }
+        }
+
+        function resetDemo() {
+            const initial = document.getElementById('demo-initial');
+            const results = document.getElementById('demo-results');
+            const highlights = document.querySelectorAll('.highlight-text');
+
+            initial.style.display = 'flex';
+            results.classList.add('hidden');
+            highlights.forEach(el =&gt; {
+                el.outerHTML = el.innerHTML; // Remove span wrapper
+            });
+            // Reset scroll
+            document.getElementById('doc-viewer').scrollTop = 0;
+        }
+
+        function highlight(spanId, paraId) {
+            // Remove existing highlights
+            document.querySelectorAll('.highlight-active').forEach(el =&gt; el.classList.remove('highlight-active'));
+
+            // Scroll to paragraph
+            const para = document.getElementById(paraId);
+            if (para) {
+                para.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Add highlight class
+                const span = document.getElementById(spanId);
+                // Simple highlight effect for demo (in production would use Ranges)
+                if (span) {
+                    span.classList.add('highlight-text', 'highlight-active');
+                    setTimeout(() =&gt; {
+                        span.classList.remove('highlight-active');
+                    }, 2000);
+                }
+            }
+        }
+
+        // Sticky Nav Blur Effect
+        window.addEventListener('scroll', () =&gt; {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY &gt; 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;&lt;/html&gt;" title="HTML Online Viewer" style="border: none; width: 100%; height: 100%;"></iframe>
+</body>
+
+</html>

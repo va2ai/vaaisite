@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: 'Merriweather', serif;
+}
+
+/* Custom Scrollbar for the Demo Viewer */
+.pdf-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pdf-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.pdf-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.pdf-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation Utilities */
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.scanner-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3b82f6;
+  box-shadow: 0 0 4px #3b82f6;
+  animation: scan 2s linear infinite;
+}
+
+.highlight-text {
+  background-color: rgba(253, 224, 71, 0.3);
+  border-bottom: 2px solid #eab308;
+  transition: all 0.3s ease;
+}
+
+.highlight-active {
+  background-color: rgba(253, 224, 71, 0.6);
+  border-bottom: 3px solid #ca8a04;
+}
+
+/* Modal Transitions */
+.modal {
+  transition: opacity 0.25s ease;
+}
+
+body.modal-active {
+  overflow: hidden;
+}
+
+/* Tab Transitions */
+.tab-btn {
+  position: relative;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1e3a8a;
+  transition: width 0.3s ease;
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+.tab-btn.active {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
