@@ -7,7 +7,7 @@ interface AnalysisPanelProps {
 
 export function AnalysisPanel({ isInitial, onRunDemo, onResetDemo, onHighlight }: AnalysisPanelProps) {
   return (
-    <div className="w-full lg:w-2/5 bg-slate-50 flex flex-col border-l border-slate-200">
+    <div className="w-full lg:w-2/5 h-1/2 lg:h-full bg-slate-50 flex flex-col border-l border-slate-200">
       <div className="h-12 bg-white border-b border-slate-200 flex items-center px-4 justify-between shadow-sm z-10">
         <span className="text-xs font-semibold text-blue-900 uppercase flex items-center">
           <span className="material-symbols-outlined text-base mr-1">smart_toy</span>

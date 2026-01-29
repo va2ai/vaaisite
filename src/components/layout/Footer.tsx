@@ -1,5 +1,7 @@
+import type { ModalType } from '../../types';
+
 interface FooterProps {
-  onOpenModal: (type: 'consultation' | 'assessment') => void;
+  onOpenModal: (type: Exclude<ModalType, null>) => void;
 }
 
 export function Footer({ onOpenModal }: FooterProps) {

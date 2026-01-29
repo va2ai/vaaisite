@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 interface NavbarProps {
-  onOpenModal: (type: 'consultation' | 'assessment') => void;
+  onOpenModal: (type: 'consultation' | 'assessment' | 'login') => void;
 }
 
 export function Navbar({ onOpenModal }: NavbarProps) {
@@ -31,29 +31,17 @@ export function Navbar({ onOpenModal }: NavbarProps) {
               VA Claims<span className="text-blue-700">AI</span>
             </span>
           </div>
-          <div className="hidden md:flex space-x-8 items-center">
-            <a href="#demo" className="text-slate-600 hover:text-blue-700 font-medium transition">
-              Live Demo
-            </a>
-            <a href="#services" className="text-slate-600 hover:text-blue-700 font-medium transition">
-              Capabilities
-            </a>
-            <a href="#engagement" className="text-slate-600 hover:text-blue-700 font-medium transition">
-              Engagement
-            </a>
-            <a href="#about" className="text-slate-600 hover:text-blue-700 font-medium transition">
-              About
-            </a>
+          
+          <div className="flex items-center space-x-6">
             <button
-              onClick={() => onOpenModal('consultation')}
-              className="bg-blue-900 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-800 transition shadow-sm hover:shadow-md"
+              onClick={() => onOpenModal('login')}
+              className="text-slate-600 hover:text-blue-900 font-medium tracking-wide text-sm uppercase"
             >
-              Schedule Consultation
+              Login
             </button>
-          </div>
-          <div className="md:hidden flex items-center">
+            <div className="h-6 w-px bg-slate-300 mx-2"></div>
             <button
-              className="text-slate-600 hover:text-slate-900"
+              className="text-slate-600 hover:text-slate-900 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="material-symbols-outlined text-3xl">menu</span>
@@ -63,23 +51,23 @@ export function Navbar({ onOpenModal }: NavbarProps) {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${mobileMenuOpen ? '' : 'hidden'} md:hidden bg-white border-b border-slate-200`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#demo" className="block px-3 py-2 text-slate-600 font-medium">
+      <div className={`${mobileMenuOpen ? '' : 'hidden'} bg-white border-b border-slate-200 shadow-lg absolute w-full`}>
+        <div className="px-4 pt-2 pb-6 space-y-2">
+          <a href="#demo" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Live Demo
           </a>
-          <a href="#services" className="block px-3 py-2 text-slate-600 font-medium">
+          <a href="#services" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Capabilities
           </a>
-          <a href="#engagement" className="block px-3 py-2 text-slate-600 font-medium">
+          <a href="#engagement" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Engagement
           </a>
-          <a href="#about" className="block px-3 py-2 text-slate-600 font-medium">
+          <a href="#about" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             About
           </a>
           <button
             onClick={() => onOpenModal('consultation')}
-            className="w-full text-left px-3 py-2 text-blue-700 font-bold"
+            className="w-full text-left px-3 py-3 text-blue-700 font-bold hover:bg-blue-50 rounded-lg"
           >
             Schedule Consultation
           </button>

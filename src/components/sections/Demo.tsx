@@ -77,7 +77,7 @@ export function Demo() {
   }, []);
 
   return (
-    <section id="demo" className="py-20 bg-slate-50 border-y border-slate-200">
+    <section id="demo" className="pt-12 pb-20 bg-slate-50 border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <span className="text-blue-600 font-bold tracking-wider uppercase text-sm">
@@ -113,7 +113,7 @@ export function Demo() {
 
         {/* Tab Content: Live Interface */}
         <div className={`tab-content ${activeMainTab === 'demo-live' ? 'active' : ''}`}>
-          <div className="bg-slate-100 rounded-xl shadow-inner border border-slate-300 overflow-hidden flex flex-col lg:flex-row h-[600px]">
+          <div className="bg-slate-100 rounded-xl shadow-inner border border-slate-300 overflow-hidden flex flex-col lg:flex-row h-[85vh] lg:h-[600px]">
             <DocumentViewer
               ref={docViewerRef}
               activeTab={activeDocTab}

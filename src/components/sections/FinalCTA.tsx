@@ -6,13 +6,13 @@ export function FinalCTA({ onOpenModal }: FinalCTAProps) {
   return (
     <section className="py-16 bg-blue-900 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold font-serif mb-4">Ready to Cut Review Time in Half?</h2>
+        <h2 className="text-3xl font-bold font-serif mb-4">Ready to Build a Defensible Workflow?</h2>
         <p className="text-blue-100 text-lg mb-8">
           Book a 15-minute workflow audit—no sales pitch, just examples and fit assessment
         </p>
         <button
           onClick={() => onOpenModal('consultation')}
-          className="inline-flex items-center bg-white text-blue-900 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition shadow-lg text-lg"
+          className="inline-flex items-center bg-emerald-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-emerald-700 transition shadow-lg text-lg"
         >
           <span className="material-symbols-outlined mr-2">calendar_today</span>
           Book Your Workflow Audit
@@ -23,7 +23,7 @@ export function FinalCTA({ onOpenModal }: FinalCTAProps) {
             onClick={() => onOpenModal('assessment')}
             className="underline hover:text-white"
           >
-            request a full workflow assessment
+            request a free Risk + RAG assessment
           </button>
         </p>
       </div>

@@ -14,7 +14,7 @@ export const DocumentViewer = forwardRef<HTMLDivElement, DocumentViewerProps>(
         : 'px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition';
 
     return (
-      <div className="w-full lg:w-3/5 bg-white border-r border-slate-200 flex flex-col relative">
+      <div className="w-full lg:w-3/5 h-1/2 lg:h-full bg-white border-r border-slate-200 flex flex-col relative">
         <div className="bg-slate-100 border-b border-slate-200">
           <div className="h-12 flex items-center px-4 justify-between border-b border-slate-300">
             <span className="text-xs font-semibold text-slate-500 uppercase flex items-center">
