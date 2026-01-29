@@ -21,8 +21,8 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
 
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Phase 1 */}
-            <div className="relative">
-              <div className="bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+            <div className="relative h-full">
+              <div className="bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
                   Phase 1
                 </div>
@@ -42,7 +42,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
                   </ul>
                 </div>
 
-                <div className="bg-green-50 rounded-lg p-3 mb-6 border border-green-200">
+                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
                   <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
                   <p className="text-xs text-slate-700">
                     Teams exploring AI safely and want clear understanding of risks + benefits before committing
@@ -51,7 +51,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
 
                 <button
                   onClick={() => onOpenModal('assessment')}
-                  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md"
+                  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md mt-6"
                 >
                   Request Assessment
                 </button>
@@ -59,8 +59,8 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
             </div>
 
             {/* Phase 2 */}
-            <div className="relative">
-              <div className="bg-white border-2 border-amber-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+            <div className="relative h-full">
+              <div className="bg-white border-2 border-amber-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
                   Phase 2
                 </div>
@@ -80,7 +80,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
                   </ul>
                 </div>
 
-                <div className="bg-green-50 rounded-lg p-3 mb-6 border border-green-200">
+                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
                   <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
                   <p className="text-xs text-slate-700">
                     Validating one workflow fast with measurable results before broader rollout
@@ -89,7 +89,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
 
                 <button
                   onClick={() => onOpenModal('consultation')}
-                  className="w-full py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition shadow-md"
+                  className="w-full py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition shadow-md mt-6"
                 >
                   Discuss Sprint
                 </button>
@@ -97,8 +97,8 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
             </div>
 
             {/* Phase 3 */}
-            <div className="relative">
-              <div className="bg-white border-2 border-green-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+            <div className="relative h-full">
+              <div className="bg-white border-2 border-green-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
                   Phase 3
                 </div>
@@ -118,7 +118,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
                   </ul>
                 </div>
 
-                <div className="bg-green-50 rounded-lg p-3 mb-6 border border-green-200">
+                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
                   <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
                   <p className="text-xs text-slate-700">
                     Production use with comprehensive QA, training, and ongoing support
@@ -127,7 +127,7 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
 
                 <button
                   onClick={() => onOpenModal('consultation')}
-                  className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition shadow-md"
+                  className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition shadow-md mt-6"
                 >
                   Discuss Implementation
                 </button>

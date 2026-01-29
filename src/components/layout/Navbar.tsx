@@ -53,20 +53,20 @@ export function Navbar({ onOpenModal }: NavbarProps) {
       {/* Mobile Menu */}
       <div className={`${mobileMenuOpen ? '' : 'hidden'} bg-white border-b border-slate-200 shadow-lg absolute w-full`}>
         <div className="px-4 pt-2 pb-6 space-y-2">
-          <a href="#demo" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
+          <a href="#demo" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Live Demo
           </a>
-          <a href="#services" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
+          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Capabilities
           </a>
-          <a href="#engagement" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
+          <a href="#engagement" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             Engagement
           </a>
-          <a href="#about" className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
+          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 rounded-lg">
             About
           </a>
           <button
-            onClick={() => onOpenModal('consultation')}
+            onClick={() => { setMobileMenuOpen(false); onOpenModal('consultation'); }}
             className="w-full text-left px-3 py-3 text-blue-700 font-bold hover:bg-blue-50 rounded-lg"
           >
             Schedule Consultation

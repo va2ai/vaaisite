@@ -27,13 +27,18 @@ export function Hero({ onOpenModal }: HeroProps) {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight font-serif">
-              Defensible AI Extraction for VA Claims –{' '}
-              <span className="text-blue-700">Citation-Traced, Attorney-Approved, BVA-Ready</span>
+              Defensible AI for VA Claims & Appeals —{' '}
+              <span className="text-blue-700">Built for BVA Scrutiny</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Protect your license and your veteran's case with the only extraction engine built for BVA-level scrutiny. Audit every output against the source record in seconds.
+            <p className="text-lg text-slate-600 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              A citation-grounded AI system for evidence extraction, legal reasoning, and workflow automation in veterans' benefits law. Every output is traceable, reviewable, and attorney-approved—by design.
+            </p>
+
+            {/* Supporting Line */}
+            <p className="text-base text-slate-500 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Move faster without risking credibility: audit sources, reasoning chains, and development errors across C-files, exams, and Board decisions in minutes, not hours.
             </p>
 
             {/* CTAs */}
