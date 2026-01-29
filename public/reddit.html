@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Fetch API</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            gray: {
+              750: '#2d3748',
+              850: '#1a202c',
+              950: '#0d1117',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e293b; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #475569; 
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b; 
+    }
+
+    .json-key { color: #93c5fd; }
+    .json-string { color: #a5f3fc; }
+    .json-number { color: #fdba74; }
+    .json-boolean { color: #fca5a5; }
+    .json-null { color: #94a3b8; }
+  </style>
+</head>
+<body class="bg-gray-950 text-slate-200 min-h-screen font-sans selection:bg-blue-500/30">
+
+  <div class="max-w-6xl mx-auto p-6 flex flex-col h-screen gap-6">
+    
+    <!-- Header -->
+    <header class="flex items-center justify-between py-4 border-b border-gray-800">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/20">
+          <span class="font-serif font-bold text-xl text-white">R</span>
+        </div>
+        <div>
+          <h1 class="font-serif text-xl font-bold text-gray-100 tracking-tight">Reddit Fetch API</h1>
+          <p class="text-xs text-slate-500 font-medium">DEVELOPER TOOL</p>
+        </div>
+      </div>
+      
+      <div id="status-badge" class="hidden px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700 items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-gray-500"></span>
+        Idle
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col lg:flex-row gap-6 overflow-hidden">
+      
+      <!-- Input Panel -->
+      <aside class="w-full lg:w-1/3 flex flex-col gap-6 shrink-0">
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+          
+          <!-- Mode Switcher -->
+          <div class="flex bg-gray-950 rounded-lg p-1 border border-gray-800 mb-6">
+            <button onclick="setMode('url')" id="mode-url" class="flex-1 px-3 py-2 text-sm font-medium rounded-md bg-gray-800 text-white shadow-sm transition-all">
+              URL Fetch
+            </button>
+            <button onclick="setMode('search')" id="mode-search" class="flex-1 px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-white transition-all">
+              Search
+            </button>
+            <button onclick="setMode('subreddit')" id="mode-subreddit" class="flex-1 px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-white transition-all">
+              Subreddit
+            </button>
+          </div>
+
+          <div class="space-y-4">
+            
+            <!-- URL Input (Mode: URL) -->
+            <div id="input-url-group">
+              <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Reddit URL</label>
+              <div class="relative group">
+                <input type="text" id="url" 
+                  class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 pr-10 transition-all font-mono placeholder-gray-600" 
+                  placeholder="https://www.reddit.com/r/..."
+                  autofocus>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-600 group-focus-within:text-blue-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search Input (Mode: Search) -->
+            <div id="input-search-group" class="hidden">
+              <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Search Query</label>
+              <div class="relative group">
+                <input type="text" id="query" 
+                  class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 pr-10 transition-all font-mono placeholder-gray-600" 
+                  placeholder="e.g. python programming">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-600 group-focus-within:text-blue-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mt-3">
+                <input type="checkbox" id="nsfw" class="w-4 h-4 text-blue-600 bg-gray-950 border-gray-700 rounded focus:ring-blue-500 focus:ring-2 accent-blue-600">
+                <label for="nsfw" class="text-xs font-semibold text-slate-400 uppercase tracking-wider cursor-pointer select-none">Include NSFW</label>
+              </div>
+            </div>
+
+            <!-- Subreddit Input (Mode: Subreddit) -->
+            <div id="input-subreddit-group" class="hidden">
+              <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Subreddit Name</label>
+              <div class="relative group">
+                <input type="text" id="subreddit" 
+                  class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 pr-10 transition-all font-mono placeholder-gray-600" 
+                  placeholder="e.g. funny">
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-600 group-focus-within:text-blue-500 transition-colors">
+                  <span class="text-xs font-bold text-gray-500">r/</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Limit</label>
+                <input type="number" id="limit" value="10" min="1" max="500"
+                  class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 font-mono transition-all">
+              </div>
+              
+              <!-- Sort Dropdown (Mode: Search) -->
+              <div id="sort-group" class="hidden">
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Sort</label>
+                <select id="sort" class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 font-mono transition-all appearance-none">
+                  <option value="relevance">Relevance</option>
+                  <option value="hot">Hot</option>
+                  <option value="top">Top</option>
+                  <option value="new">New</option>
+                  <option value="comments">Comments</option>
+                </select>
+              </div>
+
+               <!-- Time Filter Dropdown (Mode: Subreddit) -->
+               <div id="time-filter-group" class="hidden">
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Time</label>
+                <select id="time_filter" class="w-full bg-gray-950 border border-gray-700 text-slate-200 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3 font-mono transition-all appearance-none">
+                  <option value="day">Day</option>
+                  <option value="week">Week</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
+                  <option value="all">All Time</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-3">
+            <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Actions</label>
+            
+            <!-- URL Actions -->
+            <div id="actions-url" class="space-y-3">
+              <button onclick="fetchData('get_post_text')" class="w-full group relative flex items-center justify-between p-3 text-sm font-medium text-slate-300 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-800 hover:text-white hover:border-gray-600 transition-all">
+                <span>Post Content</span>
+                <span class="text-xs font-mono text-gray-500 bg-gray-900 px-2 py-1 rounded group-hover:bg-gray-800 border border-gray-800 group-hover:border-gray-700 transition-colors">get_post_text</span>
+              </button>
+
+              <button onclick="fetchData('get_comments')" class="w-full group relative flex items-center justify-between p-3 text-sm font-medium text-slate-300 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-800 hover:text-white hover:border-gray-600 transition-all">
+                <span>Comments</span>
+                <span class="text-xs font-mono text-gray-500 bg-gray-900 px-2 py-1 rounded group-hover:bg-gray-800 border border-gray-800 group-hover:border-gray-700 transition-colors">get_comments</span>
+              </button>
+
+              <button onclick="fetchData('get_all')" class="w-full relative flex items-center justify-center gap-2 p-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                Fetch Everything
+              </button>
+            </div>
+
+            <!-- Search Actions -->
+            <div id="actions-search" class="hidden space-y-3">
+               <button onclick="fetchData('search_reddit')" class="w-full relative flex items-center justify-center gap-2 p-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                </svg>
+                Search Reddit
+              </button>
+            </div>
+
+            <!-- Subreddit Actions -->
+            <div id="actions-subreddit" class="hidden space-y-3">
+              <button onclick="fetchData('get_subreddit_posts')" class="w-full relative flex items-center justify-center gap-2 p-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                 <path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L16 3.586v12.828l2.293 2.293A1 1 0 0020 18V6a1 1 0 00-.293-.707z" clip-rule="evenodd" />
+               </svg>
+               Get Top Posts
+             </button>
+           </div>
+
+          </div>
+        </div>
+
+        <div id="meta" class="hidden bg-gray-900/30 border border-gray-800 rounded-xl p-4 text-xs text-slate-400 flex-col gap-2">
+           <div class="flex justify-between">
+             <span>Time</span>
+             <span id="metaTime" class="font-mono text-slate-200">0ms</span>
+           </div>
+           <div class="flex justify-between">
+             <span>Size</span>
+             <span id="metaSize" class="font-mono text-slate-200">0 B</span>
+           </div>
+           <div class="flex justify-between">
+             <span>Endpoint</span>
+             <span id="metaEndpoint" class="font-mono text-blue-400">...</span>
+           </div>
+        </div>
+      </aside>
+
+      <!-- Output Panel -->
+      <section class="flex-1 flex flex-col min-w-0 bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-800 bg-gray-900/80 backdrop-blur">
+          <div class="flex items-center gap-4">
+            <h2 class="text-sm font-semibold text-slate-300 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              Response
+            </h2>
+            
+            <!-- Tabs -->
+            <div class="flex bg-gray-950 rounded-lg p-1 border border-gray-800">
+              <button onclick="switchTab('json')" id="tab-json" class="px-3 py-1 text-xs font-medium rounded-md bg-gray-800 text-white shadow-sm transition-all">
+                JSON
+              </button>
+              <button onclick="switchTab('media')" id="tab-media" class="px-3 py-1 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+                Media
+                <span id="mediaCount" class="hidden bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded-full">0</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex gap-2">
+            <button onclick="copyOutput()" id="copyBtn" disabled class="p-1.5 text-slate-400 hover:text-white hover:bg-gray-800 rounded-md transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Copy to Clipboard">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+              </svg>
+            </button>
+            <button onclick="nextPage()" id="nextBtn" disabled class="p-1.5 text-slate-400 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors disabled:opacity-30 disabled:cursor-not-allowed" title="Next Page">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+               </svg>
+            </button>
+            <button onclick="clearOutput()" class="p-1.5 text-slate-400 hover:text-red-400 hover:bg-gray-800 rounded-md transition-colors" title="Clear">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <div class="relative flex-1 overflow-hidden bg-[#0d1117]">
+          <!-- Loading Overlay -->
+          <div id="loadingOverlay" class="absolute inset-0 bg-gray-900/50 backdrop-blur-sm flex items-center justify-center z-10 hidden">
+            <div class="flex flex-col items-center gap-3">
+              <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+              <span class="text-sm font-medium text-blue-400">Processing...</span>
+            </div>
+          </div>
+
+          <!-- Content: JSON -->
+          <div class="absolute inset-0 overflow-auto p-4 transition-opacity duration-200" id="jsonPanel">
+            <pre id="output" class="font-mono text-xs leading-5"><span class="text-slate-600 italic">// Response will appear here...</span></pre>
+          </div>
+
+          <!-- Content: Media -->
+          <div class="absolute inset-0 overflow-auto p-4 hidden opacity-0 transition-opacity duration-200" id="mediaPanel">
+             <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Media Items will be injected here -->
+                <div class="col-span-full text-center py-10 text-slate-500">
+                  <p>No media detected in response.</p>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-2 text-xs text-slate-600">
+      &copy; 2026 VaClaims.net
+    </footer>
+
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 bg-gray-800 border border-gray-700 text-white text-sm font-medium rounded-lg shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-3 z-50">
+    <span id="toastIcon" class="text-xl">✅</span>
+    <span id="toastMessage">Notification</span>
+  </div>
+
+  <script>
+    const API_BASE = 'https://api.vaclaims.net';
+    let lastResponse = null;
+    let currentMode = 'url'; // 'url', 'search', or 'subreddit'
+    let currentAfter = null;
+
+    // UI Elements
+    const elements = {
+      // Inputs
+      url: document.getElementById('url'),
+      query: document.getElementById('query'),
+      subreddit: document.getElementById('subreddit'),
+      limit: document.getElementById('limit'),
+      sort: document.getElementById('sort'),
+      timeFilter: document.getElementById('time_filter'),
+      nsfw: document.getElementById('nsfw'),
+      
+      // Groups
+      inputUrlGroup: document.getElementById('input-url-group'),
+      inputSearchGroup: document.getElementById('input-search-group'),
+      inputSubredditGroup: document.getElementById('input-subreddit-group'),
+      sortGroup: document.getElementById('sort-group'),
+      timeFilterGroup: document.getElementById('time-filter-group'),
+      actionsUrl: document.getElementById('actions-url'),
+      actionsSearch: document.getElementById('actions-search'),
+      actionsSubreddit: document.getElementById('actions-subreddit'),
+      
+      modeUrl: document.getElementById('mode-url'),
+      modeSearch: document.getElementById('mode-search'),
+      modeSubreddit: document.getElementById('mode-subreddit'),
+
+      // Output
+      output: document.getElementById('output'),
+      statusBadge: document.getElementById('status-badge'),
+      loadingOverlay: document.getElementById('loadingOverlay'),
+      copyBtn: document.getElementById('copyBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      
+      // Meta
+      meta: document.getElementById('meta'),
+      metaTime: document.getElementById('metaTime'),
+      metaSize: document.getElementById('metaSize'),
+      metaEndpoint: document.getElementById('metaEndpoint'),
+      
+      // Tabs
+      jsonPanel: document.getElementById('jsonPanel'),
+      mediaPanel: document.getElementById('mediaPanel'),
+      tabJson: document.getElementById('tab-json'),
+      tabMedia: document.getElementById('tab-media'),
+      mediaCount: document.getElementById('mediaCount'),
+      mediaGrid: document.getElementById('mediaGrid'),
+    };
+
+    function setMode(mode) {
+      currentMode = mode;
+      currentAfter = null;
+      elements.nextBtn.disabled = true;
+      
+      // Reset classes
+      [elements.modeUrl, elements.modeSearch, elements.modeSubreddit].forEach(el => {
+        el.className = 'flex-1 px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-white transition-all';
+      });
+
+      // Active class
+      const activeClass = 'flex-1 px-3 py-2 text-sm font-medium rounded-md bg-gray-800 text-white shadow-sm transition-all';
+      
+      if (mode === 'url') {
+        elements.modeUrl.className = activeClass;
+        
+        elements.inputUrlGroup.classList.remove('hidden');
+        elements.inputSearchGroup.classList.add('hidden');
+        elements.inputSubredditGroup.classList.add('hidden');
+        
+        elements.sortGroup.classList.add('hidden');
+        elements.timeFilterGroup.classList.add('hidden');
+        
+        elements.actionsUrl.classList.remove('hidden');
+        elements.actionsSearch.classList.add('hidden');
+        elements.actionsSubreddit.classList.add('hidden');
+        
+        elements.limit.value = 100;
+        elements.url.focus();
+
+      } else if (mode === 'search') {
+        elements.modeSearch.className = activeClass;
+        
+        elements.inputUrlGroup.classList.add('hidden');
+        elements.inputSearchGroup.classList.remove('hidden');
+        elements.inputSubredditGroup.classList.add('hidden');
+
+        elements.sortGroup.classList.remove('hidden');
+        elements.timeFilterGroup.classList.add('hidden');
+        
+        elements.actionsUrl.classList.add('hidden');
+        elements.actionsSearch.classList.remove('hidden');
+        elements.actionsSubreddit.classList.add('hidden');
+        
+        elements.limit.value = 10;
+        elements.query.focus();
+
+      } else if (mode === 'subreddit') {
+        elements.modeSubreddit.className = activeClass;
+
+        elements.inputUrlGroup.classList.add('hidden');
+        elements.inputSearchGroup.classList.add('hidden');
+        elements.inputSubredditGroup.classList.remove('hidden');
+
+        elements.sortGroup.classList.add('hidden');
+        elements.timeFilterGroup.classList.remove('hidden');
+
+        elements.actionsUrl.classList.add('hidden');
+        elements.actionsSearch.classList.add('hidden');
+        elements.actionsSubreddit.classList.remove('hidden');
+
+        elements.limit.value = 10;
+        elements.subreddit.focus();
+      }
+    }
+
+    // ... (updateStatus is unchanged)
+    function updateStatus(state, message = '') {
+      elements.statusBadge.classList.remove('hidden', 'flex');
+      elements.statusBadge.classList.add('flex');
+      
+      const dot = elements.statusBadge.querySelector('span');
+      const text = elements.statusBadge.childNodes[2]; 
+      
+      elements.statusBadge.className = 'px-3 py-1 rounded-full text-xs font-medium border items-center gap-2 flex transition-colors duration-300';
+      dot.className = 'w-2 h-2 rounded-full animate-pulse';
+
+      if (state === 'idle') {
+        elements.statusBadge.classList.add('bg-gray-800', 'text-gray-400', 'border-gray-700');
+        dot.classList.add('bg-gray-500');
+        dot.classList.remove('animate-pulse');
+        text.textContent = 'Idle';
+      } else if (state === 'loading') {
+        elements.statusBadge.classList.add('bg-blue-900/30', 'text-blue-400', 'border-blue-800/50');
+        dot.classList.add('bg-blue-500');
+        text.textContent = 'Processing...';
+        elements.loadingOverlay.classList.remove('hidden');
+      } else if (state === 'success') {
+        elements.statusBadge.classList.add('bg-green-900/30', 'text-green-400', 'border-green-800/50');
+        dot.classList.add('bg-green-500');
+        dot.classList.remove('animate-pulse');
+        text.textContent = message || 'Success';
+        elements.loadingOverlay.classList.add('hidden');
+      } else if (state === 'error') {
+        elements.statusBadge.classList.add('bg-red-900/30', 'text-red-400', 'border-red-800/50');
+        dot.classList.add('bg-red-500');
+        dot.classList.remove('animate-pulse');
+        text.textContent = message || 'Error';
+        elements.loadingOverlay.classList.add('hidden');
+      }
+    }
+
+    // ... (switchTab, extractMedia, renderMedia are unchanged)
+    function switchTab(tab) {
+      if (tab === 'json') {
+        elements.jsonPanel.classList.remove('hidden');
+        requestAnimationFrame(() => elements.jsonPanel.classList.remove('opacity-0'));
+        
+        elements.mediaPanel.classList.add('opacity-0');
+        setTimeout(() => elements.mediaPanel.classList.add('hidden'), 200);
+
+        elements.tabJson.className = 'px-3 py-1 text-xs font-medium rounded-md bg-gray-800 text-white shadow-sm transition-all';
+        elements.tabMedia.className = 'px-3 py-1 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-all flex items-center gap-1.5';
+      } else {
+        elements.mediaPanel.classList.remove('hidden');
+        requestAnimationFrame(() => elements.mediaPanel.classList.remove('opacity-0'));
+
+        elements.jsonPanel.classList.add('opacity-0');
+        setTimeout(() => elements.jsonPanel.classList.add('hidden'), 200);
+
+        elements.tabMedia.className = 'px-3 py-1 text-xs font-medium rounded-md bg-gray-800 text-white shadow-sm transition-all flex items-center gap-1.5';
+        elements.tabJson.className = 'px-3 py-1 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-all';
+      }
+    }
+
+    function extractMedia(data) {
+      const mediaUrls = new Set();
+      
+      function scan(obj) {
+        if (!obj) return;
+        
+        if (typeof obj === 'string') {
+          if (obj.match(/^https?:\/\/.*\.(jpg|jpeg|png|gif|webp|mp4|webm|gifv)($|\?)/i)) {
+            let cleanUrl = obj.replace(/&amp;/g, '&');
+            if (cleanUrl.endsWith('.gifv')) cleanUrl = cleanUrl.replace('.gifv', '.mp4');
+            mediaUrls.add(cleanUrl);
+          }
+        } else if (Array.isArray(obj)) {
+          obj.forEach(item => scan(item));
+        } else if (typeof obj === 'object') {
+          Object.keys(obj).forEach(key => {
+            if ((key === 'url' || key === 'url_overridden_by_dest' || key === 'thumbnail') && typeof obj[key] === 'string') {
+               scan(obj[key]);
+            } else {
+               scan(obj[key]);
+            }
+          });
+        }
+      }
+      
+      scan(data);
+      return Array.from(mediaUrls);
+    }
+
+    function renderMedia(urls) {
+      const container = elements.mediaGrid;
+      container.innerHTML = '';
+
+      if (urls.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full flex flex-col items-center justify-center py-12 text-slate-500 opacity-60">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p>No media found in response</p>
+          </div>
+        `;
+        elements.mediaCount.classList.add('hidden');
+        elements.mediaCount.textContent = '0';
+        return;
+      }
+
+      elements.mediaCount.classList.remove('hidden');
+      elements.mediaCount.textContent = urls.length;
+
+      urls.forEach(url => {
+        const isVideo = url.match(/\.(mp4|webm|gifv)($|\?)/i);
+        const wrapper = document.createElement('div');
+        wrapper.className = 'group relative rounded-xl overflow-hidden bg-gray-800 border border-gray-700 shadow-lg hover:shadow-2xl transition-all hover:scale-[1.02]';
+        
+        const actions = document.createElement('div');
+        actions.className = 'absolute top-0 inset-x-0 p-2 bg-gradient-to-b from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex justify-end gap-2 z-10';
+        actions.innerHTML = `
+           <a href="${url}" target="_blank" rel="noopener noreferrer" class="p-1.5 bg-gray-900/80 rounded-full text-white hover:bg-blue-600 transition-colors" title="Open Original">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+           </a>
+        `;
+        wrapper.appendChild(actions);
+
+        if (isVideo) {
+          const video = document.createElement('video');
+          video.src = url;
+          video.controls = true;
+          video.loop = true;
+          video.className = 'w-full h-auto min-h-[200px] object-contain bg-black/50';
+          wrapper.appendChild(video);
+        } else {
+          const img = document.createElement('img');
+          img.src = url;
+          img.loading = 'lazy';
+          img.className = 'w-full h-auto min-h-[200px] object-cover hover:object-contain transition-all duration-300 bg-gray-800';
+          img.alt = 'Extracted media';
+          wrapper.appendChild(img);
+        }
+
+        container.appendChild(wrapper);
+      });
+    }
+
+    async function fetchData(endpoint, isPagination = false) {
+      if (!isPagination) {
+        currentAfter = null;
+        elements.nextBtn.disabled = true;
+      }
+
+      const limit = elements.limit.value;
+      const params = new URLSearchParams();
+      
+      // Add pagination
+      if (isPagination && currentAfter) {
+        params.append('after', currentAfter);
+      }
+
+      // Validation & Params
+      if (endpoint === 'search_reddit') {
+        const query = elements.query.value.trim();
+        if (!query) {
+          showToast('Please enter a search query', 'error');
+          elements.query.focus();
+          return;
+        }
+        params.append('query', query);
+        params.append('limit', limit);
+        params.append('sort', elements.sort.value);
+        if (elements.nsfw.checked) {
+          params.append('nsfw', 'true');
+        }
+        
+      } else if (endpoint === 'get_subreddit_posts') {
+        const subreddit = elements.subreddit.value.trim();
+        if (!subreddit) {
+           showToast('Please enter a subreddit name', 'error');
+           elements.subreddit.focus();
+           return;
+        }
+        params.append('subreddit', subreddit);
+        params.append('limit', limit);
+        params.append('time_filter', elements.timeFilter.value);
+
+      } else {
+        const url = elements.url.value.trim();
+        if (!url) {
+          showToast('Please enter a Reddit URL', 'error');
+          elements.url.focus();
+          return;
+        }
+        params.append('url', url);
+        if (endpoint !== 'get_post_text') {
+          params.append('limit', limit);
+        }
+      }
+
+      updateStatus('loading');
+      elements.copyBtn.disabled = true;
+      elements.nextBtn.disabled = true;
+      elements.meta.classList.add('hidden');
+      elements.output.innerHTML = '';
+      
+      renderMedia([]);
+
+      const startTime = performance.now();
+
+      try {
+        const response = await fetch(`${API_BASE}/${endpoint}?${params}`);
+        const data = await response.json();
+        const endTime = performance.now();
+
+        lastResponse = data;
+
+        if (response.ok) {
+          updateStatus('success', `${response.status} OK`);
+          elements.output.innerHTML = syntaxHighlight(data);
+          elements.copyBtn.disabled = false;
+          
+          const media = extractMedia(data);
+          renderMedia(media);
+
+          if (media.length > 0) {
+             showToast(`Found ${media.length} media items`);
+          }
+
+          // Handle Pagination
+          if (data.after) {
+            currentAfter = data.after;
+            elements.nextBtn.disabled = false;
+          } else {
+            currentAfter = null;
+            elements.nextBtn.disabled = true;
+          }
+
+        } else {
+          updateStatus('error', `${response.status} Error`);
+          elements.output.innerHTML = `<span class="text-red-400">${JSON.stringify(data, null, 2)}</span>`;
+        }
+
+        elements.meta.classList.remove('hidden');
+        elements.meta.classList.add('flex');
+        elements.metaEndpoint.textContent = endpoint;
+        elements.metaTime.textContent = `${(endTime - startTime).toFixed(0)}ms`;
+        elements.metaSize.textContent = formatBytes(JSON.stringify(data).length);
+
+      } catch (err) {
+        updateStatus('error', 'Failed');
+        elements.output.textContent = `Network Error: ${err.message}`;
+        console.error(err);
+        elements.loadingOverlay.classList.add('hidden');
+      }
+    }
+
+    function nextPage() {
+      if (currentMode === 'search') {
+        fetchData('search_reddit', true);
+      } else if (currentMode === 'subreddit') {
+        fetchData('get_subreddit_posts', true);
+      }
+    }
+
+    function syntaxHighlight(json) {
+      if (typeof json !== 'string') {
+        json = JSON.stringify(json, undefined, 2);
+      }
+      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        let cls = 'json-number';
+        if (/^"/.test(match)) {
+          if (/:$/.test(match)) {
+            cls = 'json-key';
+          } else {
+            cls = 'json-string';
+          }
+        } else if (/true|false/.test(match)) {
+          cls = 'json-boolean';
+        } else if (/null/.test(match)) {
+          cls = 'json-null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+      });
+    }
+
+    function copyOutput() {
+      if (!lastResponse) return;
+      navigator.clipboard.writeText(JSON.stringify(lastResponse, null, 2))
+        .then(() => showToast('JSON copied to clipboard', 'success'))
+        .catch(() => showToast('Failed to copy', 'error'));
+    }
+
+    function clearOutput() {
+      elements.output.innerHTML = '<span class="text-slate-600 italic">// Response will appear here...</span>';
+      updateStatus('idle');
+      elements.meta.classList.remove('flex');
+      elements.meta.classList.add('hidden');
+      elements.copyBtn.disabled = true;
+      elements.nextBtn.disabled = true;
+      currentAfter = null;
+      lastResponse = null;
+      renderMedia([]);
+    }
+
+
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+    }
+
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      const icon = document.getElementById('toastIcon');
+      const msg = document.getElementById('toastMessage');
+      
+      msg.textContent = message;
+      icon.textContent = type === 'error' ? '⚠️' : '✅';
+      
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+
+    // Listeners
+    elements.url.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') fetchData('get_all');
+    });
+    
+    elements.query.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') fetchData('search_reddit');
+    });
+
+    elements.subreddit.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') fetchData('get_subreddit_posts');
+    });
+
+    // Init
+    updateStatus('idle');
+
+  </script>
+</body>
+</html>

@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm create:*)"
+      "Bash(npm create:*)",
+      "Bash(docker compose:*)",
+      "Bash(where:*)",
+      "Bash(python -c:*)",
+      "Bash(git add:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: improve test skip condition for Gemini API key\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: graph loader for decisions and entities\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(SKIP_DB_TESTS=true python -m pytest:*)",
+      "Bash(git commit:*)",
+      "Bash(python -m py_compile:*)"
     ]
   }
 }
