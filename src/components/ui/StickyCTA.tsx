@@ -23,13 +23,13 @@ export function StickyCTA({ onOpenModal }: StickyCTAProps) {
         isVisible ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
-      <div className="bg-white border-t-2 border-slate-200 shadow-2xl p-4">
+      <div className="p-3">
         <button
           onClick={() => onOpenModal('consultation')}
-          className="w-full py-4 bg-emerald-600 text-white rounded-lg font-bold text-lg shadow-lg active:bg-emerald-700 transition-all flex items-center justify-center gap-2"
+          className="w-full py-3 bg-emerald-600 text-white rounded-lg font-semibold text-base shadow-lg active:bg-emerald-700 transition-all flex items-center justify-center gap-2"
         >
           <span>Book Workflow Audit</span>
-          <span className="material-symbols-outlined">arrow_forward</span>
+          <span className="material-symbols-outlined text-lg">arrow_forward</span>
         </button>
       </div>
     </div>
