@@ -12,7 +12,8 @@
       "Bash(SKIP_DB_TESTS=true python -m pytest:*)",
       "Bash(git commit:*)",
       "Bash(python -m py_compile:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }
