@@ -10,8 +10,8 @@ export const DocumentViewer = forwardRef<HTMLDivElement, DocumentViewerProps>(
   function DocumentViewer({ activeTab, onTabChange, isScanning }, ref) {
     const tabClasses = (index: number) =>
       index === activeTab
-        ? 'px-3 py-1.5 bg-white border border-slate-300 rounded-t text-xs font-semibold text-slate-900 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition'
-        : 'px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition';
+        ? 'px-3 py-2.5 md:py-1.5 bg-white border border-slate-300 rounded-t text-xs font-semibold text-slate-900 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition min-h-[44px] md:min-h-0'
+        : 'px-3 py-2.5 md:py-1.5 bg-slate-50 border border-slate-200 rounded-t text-xs text-slate-600 flex items-center gap-1 cursor-pointer hover:bg-slate-100 transition min-h-[44px] md:min-h-0';
 
     return (
       <div className="w-full lg:w-3/5 h-1/2 lg:h-full bg-white border-r border-slate-200 flex flex-col relative">

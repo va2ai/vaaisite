@@ -10,6 +10,31 @@ h1, h2, h3, h4, .serif {
   font-family: 'Merriweather', serif;
 }
 
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll for horizontal containers */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Accordion smooth animation */
+.accordion-content {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 /* Custom Scrollbar for the Demo Viewer */
 .pdf-scroll::-webkit-scrollbar {
   width: 8px;

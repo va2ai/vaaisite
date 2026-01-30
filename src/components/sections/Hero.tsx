@@ -26,40 +26,40 @@ export function Hero({ onOpenModal }: HeroProps) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight font-serif">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-900 leading-[1.15] mb-5 tracking-tight font-serif">
               Defensible AI for VA Claims & Appeals —{' '}
               <span className="text-blue-700">Built for BVA Scrutiny</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-slate-600 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              A citation-grounded AI system for evidence extraction, legal reasoning, and workflow automation in veterans' benefits law. Every output is traceable, reviewable, and attorney-approved—by design.
+            <p className="text-base sm:text-lg text-slate-600 mb-3 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Citation-grounded AI for evidence extraction, legal reasoning, and workflow automation. Every output is traceable, reviewable, and attorney-approved.
             </p>
 
             {/* Supporting Line */}
-            <p className="text-base text-slate-500 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Move faster without risking credibility: audit sources, reasoning chains, and development errors across C-files, exams, and Board decisions in minutes, not hours.
+            <p className="text-sm sm:text-base text-slate-500 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Audit sources, reasoning chains, and errors across C-files and Board decisions in minutes.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4">
               <button
                 onClick={() => onOpenModal('consultation')}
-                className="w-full sm:w-auto px-10 py-5 bg-emerald-600 text-white rounded-xl font-bold text-xl shadow-xl hover:bg-emerald-700 transform hover:-translate-y-1 transition-all flex items-center justify-center"
+                className="w-full sm:w-auto px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold text-lg sm:text-xl shadow-xl hover:bg-emerald-700 active:bg-emerald-800 transition-all flex items-center justify-center"
               >
-                Book 15-min Workflow Audit
+                Book Workflow Audit
                 <span className="material-symbols-outlined ml-2">arrow_forward</span>
               </button>
               <button
                 onClick={() => onOpenModal('assessment')}
-                className="w-full sm:w-auto px-8 py-5 bg-white text-slate-700 border-2 border-slate-200 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-700 transition-all flex items-center justify-center"
+                className="w-full sm:w-auto px-6 py-4 bg-white text-slate-700 border-2 border-slate-200 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-700 active:border-blue-700 transition-all flex items-center justify-center text-sm sm:text-base"
               >
-                Request Free Risk + RAG Assessment
+                Request Risk Assessment
               </button>
             </div>
 
             {/* CTA Subtext */}
-            <p className="text-sm text-slate-500 text-center lg:text-left">
+            <p className="text-xs sm:text-sm text-slate-500 text-center lg:text-left">
               No sales pitch. Real workflow review.
             </p>
           </div>

@@ -3,6 +3,90 @@ interface EngagementModelsProps {
 }
 
 export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
+  const phases = [
+    {
+      number: 1,
+      color: 'blue',
+      icon: 'assessment',
+      title: 'Workflow Assessment',
+      duration: '1-2 weeks',
+      whatHappens: [
+        'Workflow mapping session',
+        'Risk assessment review',
+        'ROI opportunity analysis',
+        'Phased implementation roadmap'
+      ],
+      bestFor: 'Teams exploring AI safely and want clear understanding of risks + benefits before committing',
+      buttonText: 'Request Assessment',
+      modalType: 'assessment' as const
+    },
+    {
+      number: 2,
+      color: 'amber',
+      icon: 'rocket_launch',
+      title: 'Prototype Sprint',
+      duration: '2-4 weeks',
+      whatHappens: [
+        'Build one high-impact workflow',
+        'Rapid development iteration',
+        'Working demo with your data',
+        'Performance metrics captured'
+      ],
+      bestFor: 'Validating one workflow fast with measurable results before broader rollout',
+      buttonText: 'Discuss Sprint',
+      modalType: 'consultation' as const
+    },
+    {
+      number: 3,
+      color: 'green',
+      icon: 'deployed_code',
+      title: 'Implementation',
+      duration: '8-12 weeks',
+      whatHappens: [
+        'Production system architecture',
+        'Full integration with your stack',
+        'QA validation test sets',
+        'Staff training + documentation'
+      ],
+      bestFor: 'Production use with comprehensive QA, training, and ongoing support',
+      buttonText: 'Discuss Implementation',
+      modalType: 'consultation' as const
+    }
+  ];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      blue: {
+        border: 'border-blue-500',
+        badge: 'bg-blue-600',
+        icon: 'text-blue-600',
+        bg: 'bg-blue-50 border-blue-200',
+        text: 'text-blue-900',
+        textAlt: 'text-blue-600',
+        button: 'bg-blue-600 hover:bg-blue-700'
+      },
+      amber: {
+        border: 'border-amber-500',
+        badge: 'bg-amber-600',
+        icon: 'text-amber-600',
+        bg: 'bg-amber-50 border-amber-200',
+        text: 'text-amber-900',
+        textAlt: 'text-amber-600',
+        button: 'bg-amber-600 hover:bg-amber-700'
+      },
+      green: {
+        border: 'border-green-500',
+        badge: 'bg-green-600',
+        icon: 'text-green-600',
+        bg: 'bg-green-50 border-green-200',
+        text: 'text-green-900',
+        textAlt: 'text-green-600',
+        button: 'bg-green-600 hover:bg-green-700'
+      }
+    };
+    return colors[color as keyof typeof colors];
+  };
+
   return (
     <section id="engagement" className="py-20 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,126 +97,96 @@ export function EngagementModels({ onOpenModal }: EngagementModelsProps) {
 
         {/* Timeline */}
         <div className="relative max-w-5xl mx-auto">
-          {/* Connection Line */}
+          {/* Connection Line - Desktop only */}
           <div
             className="hidden md:block absolute left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-amber-500 to-green-600"
             style={{ top: '80px' }}
           />
 
-          <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Phase 1 */}
-            <div className="relative h-full">
-              <div className="bg-white border-2 border-blue-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  Phase 1
-                </div>
-                <div className="text-center mt-4 mb-6">
-                  <span className="material-symbols-outlined text-5xl text-blue-600 mb-3 block">assessment</span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Workflow Assessment</h3>
-                  <p className="text-sm text-blue-600 font-semibold mb-4">1-2 weeks</p>
-                </div>
+          {/* Mobile: Horizontal Scroll with Peek */}
+          <div className="md:hidden overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+            <div className="flex gap-4">
+              {phases.map((phase) => {
+                const colors = getColorClasses(phase.color);
+                return (
+                  <div key={phase.number} className="w-[85vw] max-w-[340px] flex-shrink-0 snap-center">
+                    <div className={`bg-white border-2 ${colors.border} rounded-2xl p-6 shadow-lg h-full flex flex-col`}>
+                      <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 ${colors.badge} text-white px-4 py-1 rounded-full text-xs font-bold uppercase`}>
+                        Phase {phase.number}
+                      </div>
+                      <div className="text-center mt-4 mb-6">
+                        <span className={`material-symbols-outlined text-5xl ${colors.icon} mb-3 block`}>{phase.icon}</span>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2">{phase.title}</h3>
+                        <p className={`text-sm ${colors.textAlt} font-semibold mb-4`}>{phase.duration}</p>
+                      </div>
 
-                <div className="bg-blue-50 rounded-lg p-3 mb-4 border border-blue-200">
-                  <p className="text-xs font-bold text-blue-900 mb-1">What happens:</p>
-                  <ul className="text-xs text-slate-700 space-y-1">
-                    <li>• Workflow mapping session</li>
-                    <li>• Risk assessment review</li>
-                    <li>• ROI opportunity analysis</li>
-                    <li>• Phased implementation roadmap</li>
-                  </ul>
-                </div>
+                      <div className={`${colors.bg} rounded-lg p-3 mb-4 border`}>
+                        <p className={`text-xs font-bold ${colors.text} mb-1`}>What happens:</p>
+                        <ul className="text-xs text-slate-700 space-y-1">
+                          {phase.whatHappens.map((item, idx) => (
+                            <li key={idx}>• {item}</li>
+                          ))}
+                        </ul>
+                      </div>
 
-                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
-                  <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
-                  <p className="text-xs text-slate-700">
-                    Teams exploring AI safely and want clear understanding of risks + benefits before committing
-                  </p>
-                </div>
+                      <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
+                        <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
+                        <p className="text-xs text-slate-700">{phase.bestFor}</p>
+                      </div>
 
-                <button
-                  onClick={() => onOpenModal('assessment')}
-                  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md mt-6"
-                >
-                  Request Assessment
-                </button>
-              </div>
+                      <button
+                        onClick={() => onOpenModal(phase.modalType)}
+                        className={`w-full py-3 ${colors.button} text-white font-semibold rounded-lg transition shadow-md mt-6`}
+                      >
+                        {phase.buttonText}
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+          </div>
 
-            {/* Phase 2 */}
-            <div className="relative h-full">
-              <div className="bg-white border-2 border-amber-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  Phase 2
-                </div>
-                <div className="text-center mt-4 mb-6">
-                  <span className="material-symbols-outlined text-5xl text-amber-600 mb-3 block">rocket_launch</span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Prototype Sprint</h3>
-                  <p className="text-sm text-amber-600 font-semibold mb-4">2-4 weeks</p>
-                </div>
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8 relative">
+            {phases.map((phase) => {
+              const colors = getColorClasses(phase.color);
+              return (
+                <div key={phase.number} className="relative h-full">
+                  <div className={`bg-white border-2 ${colors.border} rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col`}>
+                    <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 ${colors.badge} text-white px-4 py-1 rounded-full text-xs font-bold uppercase`}>
+                      Phase {phase.number}
+                    </div>
+                    <div className="text-center mt-4 mb-6">
+                      <span className={`material-symbols-outlined text-5xl ${colors.icon} mb-3 block`}>{phase.icon}</span>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">{phase.title}</h3>
+                      <p className={`text-sm ${colors.textAlt} font-semibold mb-4`}>{phase.duration}</p>
+                    </div>
 
-                <div className="bg-amber-50 rounded-lg p-3 mb-4 border border-amber-200">
-                  <p className="text-xs font-bold text-amber-900 mb-1">What happens:</p>
-                  <ul className="text-xs text-slate-700 space-y-1">
-                    <li>• Build one high-impact workflow</li>
-                    <li>• Rapid development iteration</li>
-                    <li>• Working demo with your data</li>
-                    <li>• Performance metrics captured</li>
-                  </ul>
-                </div>
+                    <div className={`${colors.bg} rounded-lg p-3 mb-4 border`}>
+                      <p className={`text-xs font-bold ${colors.text} mb-1`}>What happens:</p>
+                      <ul className="text-xs text-slate-700 space-y-1">
+                        {phase.whatHappens.map((item, idx) => (
+                          <li key={idx}>• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
 
-                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
-                  <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
-                  <p className="text-xs text-slate-700">
-                    Validating one workflow fast with measurable results before broader rollout
-                  </p>
-                </div>
+                    <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
+                      <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
+                      <p className="text-xs text-slate-700">{phase.bestFor}</p>
+                    </div>
 
-                <button
-                  onClick={() => onOpenModal('consultation')}
-                  className="w-full py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition shadow-md mt-6"
-                >
-                  Discuss Sprint
-                </button>
-              </div>
-            </div>
-
-            {/* Phase 3 */}
-            <div className="relative h-full">
-              <div className="bg-white border-2 border-green-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 h-full flex flex-col">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  Phase 3
+                    <button
+                      onClick={() => onOpenModal(phase.modalType)}
+                      className={`w-full py-3 ${colors.button} text-white font-semibold rounded-lg transition shadow-md mt-6`}
+                    >
+                      {phase.buttonText}
+                    </button>
+                  </div>
                 </div>
-                <div className="text-center mt-4 mb-6">
-                  <span className="material-symbols-outlined text-5xl text-green-600 mb-3 block">deployed_code</span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Implementation</h3>
-                  <p className="text-sm text-green-600 font-semibold mb-4">8-12 weeks</p>
-                </div>
-
-                <div className="bg-green-50 rounded-lg p-3 mb-4 border border-green-200">
-                  <p className="text-xs font-bold text-green-900 mb-1">What happens:</p>
-                  <ul className="text-xs text-slate-700 space-y-1">
-                    <li>• Production system architecture</li>
-                    <li>• Full integration with your stack</li>
-                    <li>• QA validation test sets</li>
-                    <li>• Staff training + documentation</li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-50 rounded-lg p-3 border border-green-200 flex-grow">
-                  <p className="text-xs font-bold text-green-900 mb-1">Best for:</p>
-                  <p className="text-xs text-slate-700">
-                    Production use with comprehensive QA, training, and ongoing support
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => onOpenModal('consultation')}
-                  className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition shadow-md mt-6"
-                >
-                  Discuss Implementation
-                </button>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
 

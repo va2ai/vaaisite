@@ -12,6 +12,7 @@ import { RecruiterSection } from './components/sections/RecruiterSection';
 import { FAQ } from './components/sections/FAQ';
 import { FinalCTA } from './components/sections/FinalCTA';
 import { Modal } from './components/ui/Modal';
+import { StickyCTA } from './components/ui/StickyCTA';
 import { useModal } from './hooks/useModal';
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       </main>
 
       <Footer onOpenModal={openModal} />
+
+      <StickyCTA onOpenModal={openModal} />
 
       {modalType && <Modal type={modalType} onClose={closeModal} />}
     </>

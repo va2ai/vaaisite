@@ -95,7 +95,7 @@ export function Demo() {
         <div className="flex justify-center mb-8 border-b border-slate-200">
           <button
             onClick={() => setActiveMainTab('demo-live')}
-            className={`tab-btn px-6 py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none ${
+            className={`tab-btn px-6 py-4 md:py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none min-h-[44px] ${
               activeMainTab === 'demo-live' ? 'active' : ''
             }`}
           >
@@ -103,7 +103,7 @@ export function Demo() {
           </button>
           <button
             onClick={() => setActiveMainTab('demo-difference')}
-            className={`tab-btn px-6 py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none ${
+            className={`tab-btn px-6 py-4 md:py-3 text-slate-500 hover:text-blue-800 font-medium transition focus:outline-none min-h-[44px] ${
               activeMainTab === 'demo-difference' ? 'active' : ''
             }`}
           >
