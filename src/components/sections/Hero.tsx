@@ -27,18 +27,18 @@ export function Hero({ onOpenModal }: HeroProps) {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-900 leading-[1.15] mb-5 tracking-tight font-serif">
-              Defensible AI for VA Claims & Appeals —{' '}
-              <span className="text-blue-700">Built for BVA Scrutiny</span>
+              Transforming Legal Operations —{' '}
+              <span className="text-blue-700">End-to-End</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-600 mb-3 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Citation-grounded AI for evidence extraction, legal reasoning, and workflow automation. Every output is traceable, reviewable, and attorney-approved.
+              We're transforming how legal and professional services operate — not incrementally, but end-to-end. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we're reshaping how critical knowledge work gets done for decades to come.
             </p>
 
             {/* Supporting Line */}
             <p className="text-sm sm:text-base text-slate-500 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Audit sources, reasoning chains, and errors across C-files and Board decisions in minutes.
+              Citation-grounded AI for evidence extraction, legal reasoning, and workflow automation — built for BVA scrutiny.
             </p>
 
             {/* CTAs */}
